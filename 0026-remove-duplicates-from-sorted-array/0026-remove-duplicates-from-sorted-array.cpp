@@ -3,7 +3,7 @@ public:
     int removeDuplicates(vector<int>& nums) {
         vector<int>::size_type n = nums.size();
 
-        int write = 0;
+        int write = 1;
         int read = 1;
 
         while (read < n) {
@@ -12,9 +12,9 @@ public:
                 continue;
             }
 
-            nums[++write] = nums[read++];
+            nums[write++] = nums[read++];
         }
 
-        return write + 1;
+        return write;
     }
 };
