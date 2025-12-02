@@ -16,6 +16,7 @@ public:
         });
 
         int takenSeats = 0;
+        
         for (vector<vector<int>>::size_type i = 0; i < n; ++i) {
             int distTraveled = trips[i][1];
             int newPassengers = trips[i][0];
