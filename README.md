@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -21,4 +22,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+## Greedy
+|  |
+| ------- |
+| [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
+## Sorting
+|  |
+| ------- |
+| [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 <!---LeetCode Topics End-->
