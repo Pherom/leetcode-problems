@@ -21,8 +21,12 @@ private:
 
 public:
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if (root == nullptr || subRoot == nullptr) {
-            return root == subRoot;
+        if (subRoot == nullptr) {
+            return true;
+        }
+
+        if (root == nullptr) {
+            return false;
         }
 
         return isSametree(root, subRoot) || isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
