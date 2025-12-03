@@ -11,20 +11,12 @@
  */
 class Solution {
 private:
-    bool isSametree(TreeNode* root, TreeNode* subRoot) {
-        if (root == nullptr && subRoot == nullptr) {
-            return true;
+    bool isSametree(TreeNode* first, TreeNode* second) {
+        if (first == nullptr || second == nullptr) {
+            return first == second;
         }
 
-        if (root == nullptr) {
-            return false;
-        }
-
-        if (subRoot == nullptr) {
-            return false;
-        }
-
-        return root->val == subRoot->val && isSametree(root->left, subRoot->left) && isSametree(root->right, subRoot->right);;
+        return first->val == second->val && isSametree(first->left, second->left) && isSametree(first->right, second->right);;
     }
 
 public:
