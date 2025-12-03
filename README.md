@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0033-search-in-rotated-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0033-search-in-rotated-sorted-array) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
 ## Depth-First Search
@@ -60,12 +61,27 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 ## String
 |  |
 | ------- |
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 ## Dynamic Programming
 |  |
 | ------- |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
+## Backtracking
+|  |
+| ------- |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+## Trie
+|  |
+| ------- |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+## Memoization
+|  |
+| ------- |
+| [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 <!---LeetCode Topics End-->
