@@ -21,22 +21,10 @@ private:
 
 public:
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        bool same = false;
-        bool left = false;
-        bool right = false;
-
-        if (root->val == subRoot->val) {
-            same = isSametree(root, subRoot);
+        if (root == nullptr || subRoot == nullptr) {
+            return root == subRoot;
         }
 
-        if (!same && root->left != nullptr) {
-            left = isSubtree(root->left, subRoot);
-        }
-
-        if (!same && !left && root->right != nullptr) {
-            right = isSubtree(root->right, subRoot);
-        }
-
-        return same || left || right;
+        return isSametree(root, subRoot) || isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
     }
 };
