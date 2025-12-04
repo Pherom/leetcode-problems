@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
+| [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -100,6 +101,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
+| [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## String Matching
 |  |
 | ------- |
@@ -108,6 +110,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
+| [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Hash Function
 |  |
 | ------- |
