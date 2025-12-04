@@ -24,7 +24,9 @@ public:
         int right2 = n2;
         
         while (left2 <= right2) {
+            // mid2 represents the size of the left partition of the merged array in nums2
             int mid2 = (left2 + right2) / 2;
+            // mid1 reperesents the same but for nums1 (so the rest)
             int mid1 = half - mid2;
 
             int l1 = mid1 - 1 < 0 ? numeric_limits<int>::min() : nums1[mid1 - 1];
@@ -37,8 +39,10 @@ public:
             }
 
             if (l1 > r2) {
+                // There are still items to take from nums2
                 left2 = mid2 + 1;
             } else {
+                // There are too many items taken from nums2
                 right2 = mid2 - 1;
             }
         }
