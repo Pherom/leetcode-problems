@@ -18,7 +18,7 @@ public:
         }
 
         vector<int>::size_type n = n1 + n2;
-        vector<int>::size_type half = (n + 1) / 2;
+        vector<int>::size_type half = (n + 1) / 2; // The size of the left portion in the merged array
 
         int left2 = 0;
         int right2 = n2;
