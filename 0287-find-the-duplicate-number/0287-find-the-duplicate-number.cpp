@@ -1,24 +1,22 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        int res = 0;
-        vector<int>::size_type n = nums.size();
+        int slow = nums[0];
+        int fast = nums[0];
 
-        for (int num : nums) {
-            int absolute = abs(num);
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
 
-            if (nums[absolute] < 0) {
-                res = absolute;
-                break;
-            }
-
-            nums[absolute] = -1 * nums[absolute];
+        // Find start of loop
+        int slow2 = nums[0];
+        
+        while (slow != slow2) {
+            slow = nums[slow];
+            slow2 = nums[slow2];
         }
 
-        for (int i = 0; i < n; ++i) {
-            nums[i] = abs(nums[i]);
-        }
-
-        return res;
+        return slow;
     }
 };
