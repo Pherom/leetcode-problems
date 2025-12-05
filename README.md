@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Breadth-First Search
@@ -100,6 +101,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## String Matching
@@ -109,6 +111,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Hash Function
@@ -124,4 +127,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 <!---LeetCode Topics End-->
