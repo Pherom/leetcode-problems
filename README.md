@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
+| [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -155,4 +156,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
+## Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
 <!---LeetCode Topics End-->
