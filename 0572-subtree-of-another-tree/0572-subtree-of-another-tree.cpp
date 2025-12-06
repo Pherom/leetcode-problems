@@ -11,12 +11,12 @@
  */
 class Solution {
 private:
-    bool isSameTree(TreeNode* first, TreeNode* second) {
+    bool isIdenticalTree(TreeNode* first, TreeNode* second) {
         if (first == nullptr || second == nullptr) {
             return first == second;
         }
 
-        return first->val == second->val && isSameTree(first->left, second->left) && isSameTree(first->right, second->right);
+        return first->val == second->val && isIdenticalTree(first->left, second->left) && isIdenticalTree(first->right, second->right);
     }
 
 public:
@@ -29,7 +29,7 @@ public:
             return false;
         }
 
-        if (root->val == subRoot->val && isSameTree(root, subRoot)) {
+        if (root->val == subRoot->val && isIdenticalTree(root, subRoot)) {
             return true;
         }
 
