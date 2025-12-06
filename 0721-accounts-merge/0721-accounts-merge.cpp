@@ -42,7 +42,7 @@ public:
         unordered_map<string_view, vector<string_view>> repToEmails{};
 
         for (pair<string_view, string_view> const& p : emailToParent) {
-            string_view rep = find(emailToParent, p.second);
+            string_view rep = find(emailToParent, p.first);
 
             auto it = repToEmails.find(rep);
 
