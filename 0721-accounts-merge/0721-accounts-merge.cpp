@@ -57,17 +57,17 @@ public:
             std::sort(repToEmails[p.first].begin(), repToEmails[p.first].end());
         }
 
-        vector<vector<string>> res{};
-        res.reserve(n);
+        vector<vector<string>> result{};
+        result.reserve(n);
 
         for (pair<string_view, vector<string_view>> const& p : repToEmails) {
-            res.push_back(vector<string>{string{emailToName[p.first]}});
+            result.push_back(vector<string>{string{emailToName[p.first]}});
 
             for (string_view email : p.second) {
-                res.back().push_back(string{email});
+                result.back().push_back(string{email});
             }
         }
 
-        return res;
+        return result;
     }
 };
