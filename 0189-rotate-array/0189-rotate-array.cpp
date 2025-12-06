@@ -7,14 +7,8 @@ public:
         if (k == 0) {
             return;
         }
-
-        int left = 0;
-        int right = n - 1;
-
-        while (left < right) {
-            std::swap(nums[left++], nums[right--]);
-        }
-
+        
+        std::reverse(nums.begin(), nums.end());
         std::reverse(nums.begin(), std::next(nums.begin(), k));
         std::reverse(std::next(nums.begin(), k), nums.end());
     }
