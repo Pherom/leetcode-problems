@@ -1,87 +1,73 @@
 class Solution {
 private:
-    int find(vector<int>& parent, int u) {
-        if (parent[u] == u) {
-            return u;
+    string_view find(unordered_map<string_view, string_view>& emailToParent, string_view email) {
+        if (email == emailToParent[email]) {
+            return email;
         }
 
-        parent[u] = find(parent, parent[u]);
-        return parent[u];
+        emailToParent[email] = find(emailToParent, emailToParent[email]);
+        return emailToParent[email];
     }
 
 public:
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
+        unordered_map<string_view, string_view> emailToName{};
+        unordered_map<string_view, string_view> emailToParent{};
         vector<vector<string>>::size_type n = accounts.size();
-        unordered_map<string, int> emailToId{};
-        int emailId = 0;
 
         for (vector<string>& acc : accounts) {
             vector<string>::size_type accSize = acc.size();
+            string_view name = acc[0];
 
             for (int i = 1; i < accSize; ++i) {
-                auto it = emailToId.find(acc[i]);
-
-                if (it == emailToId.end()) {
-                    emailToId.insert({acc[i], emailId++});
-                }
+                string_view email = acc[i];
+                emailToParent[email] = email;
+                emailToName[email] = name;
             }
         }
 
-        vector<int> parent(emailId);
-        std::iota(parent.begin(), parent.end(), 0);
-
-        int resSize = emailId;
-
         for (vector<string>& acc : accounts) {
             vector<string>::size_type accSize = acc.size();
-            int firstRep = find(parent, emailToId[acc[1]]);
+            string_view firstRep = find(emailToParent, acc[1]);
 
             for (int i = 2; i < accSize; ++i) {
-                int id = emailToId[acc[i]];
-                int rep = find(parent, id);
+                string_view rep = find(emailToParent, acc[i]);
 
                 if (firstRep != rep) {
-                    --resSize;
-                    parent[rep] = firstRep;
+                    emailToParent[rep] = firstRep;
                 }
             }
         }
 
-        vector<set<string>> temp(resSize, set<string>{});
-        unordered_map<int, int> repToIdx{};
-        vector<string> idxToName(resSize);
-        int idx = 0;
+        unordered_map<string_view, vector<string_view>> repToEmails{};
 
-        for (vector<string> const& acc : accounts) {
-            vector<string>::size_type accSize = acc.size();
-            int rep = find(parent, emailToId[acc[1]]);
+        for (pair<string_view, string_view> const& p : emailToParent) {
+            string_view rep = find(emailToParent, p.second);
 
-            auto it = repToIdx.find(rep);
+            auto it = repToEmails.find(rep);
 
-            if (it == repToIdx.end()) {
-                repToIdx.insert({rep, idx++});
+            if (it == repToEmails.end()) {
+                repToEmails.insert({rep, vector<string_view>{}});
             }
 
-            int idx = repToIdx[rep];
-            set<string>& newAcc = temp[idx];
-            idxToName[idx] = acc[0];
+            repToEmails[rep].push_back(p.first);
+        }
 
-            for (int i = 1; i < accSize; ++i) {
-                newAcc.insert(acc[i]);
+        for (pair<string_view, vector<string_view>> const& p : repToEmails) {
+            std::sort(repToEmails[p.first].begin(), repToEmails[p.first].end());
+        }
+
+        vector<vector<string>> res{};
+        res.reserve(n);
+
+        for (pair<string_view, vector<string_view>> const& p : repToEmails) {
+            res.push_back(vector<string>{string{emailToName[p.first]}});
+
+            for (string_view email : p.second) {
+                res.back().push_back(string{email});
             }
         }
 
-        vector<vector<string>> result{};
-        result.reserve(resSize);
-
-        for (int i = 0; i < resSize; ++i) {
-            result.push_back(vector<string>{idxToName[i]});
-            
-            for (string const& email : temp[i]) {
-                result[i].push_back(email);
-            }
-        }
-
-        return result;
+        return res;
     }
 };
