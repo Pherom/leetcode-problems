@@ -1,7 +1,7 @@
 class MyHashMap {
 private:
     vector<list<pair<int, int>>> mp{};
-    static constexpr size_t capacity = 1000;
+    static constexpr size_t capacity = 10000;
 
 public:
     MyHashMap()
