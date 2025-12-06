@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& temperatures) {
         vector<int>::size_type n = temperatures.size();
-        vector<int> answer(n);
+        vector<int> answer(n, 0);
         stack<int> maxIdxStack{};
 
         for (int i = n - 1; i >= 0; --i) {
@@ -10,13 +10,10 @@ public:
                 maxIdxStack.pop();
             }
 
-            if (maxIdxStack.empty()) {
-                answer[i] = 0;
-                maxIdxStack.push(i);
-                continue;
+            if (!maxIdxStack.empty()) {
+                answer[i] = maxIdxStack.top() - i;
             }
 
-            answer[i] = maxIdxStack.top() - i;
             maxIdxStack.push(i);
         }
 
