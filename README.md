@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
 ## Depth-First Search
 |  |
@@ -28,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Breadth-First Search
 |  |
@@ -35,10 +37,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0210-course-schedule-ii](https://github.com/Pherom/leetcode-problems/tree/master/0210-course-schedule-ii) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 ## Union Find
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 ## Matrix
 |  |
 | ------- |
@@ -53,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -87,6 +92,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 ## String
 |  |
 | ------- |
@@ -97,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 ## Dynamic Programming
 |  |
 | ------- |
