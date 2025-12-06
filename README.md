@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+| [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 | [0238-product-of-array-except-self](https://github.com/Pherom/leetcode-problems/tree/master/0238-product-of-array-except-self) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
@@ -72,11 +73,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/Pherom/leetcode-problems/tree/master/0027-remove-element) |
+| [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 ## Math
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/Pherom/leetcode-problems/tree/master/0007-reverse-integer) |
+| [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 ## Hash Table
 |  |
 | ------- |
