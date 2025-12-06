@@ -21,7 +21,7 @@ public:
 
             for (int i = 1; i < accSize; ++i) {
                 string_view email = acc[i];
-                emailToParent[email] = email;
+                emailToParent[email] = acc[1];
                 emailToName[email] = name;
             }
         }
