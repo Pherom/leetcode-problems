@@ -10,7 +10,7 @@ public class Solution {
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 if (grid[i][j] == 1) {
-                    markCoasts(grid, m, n, i, j, que);
+                    MarkIslandAndSeedQueue(grid, m, n, i, j, que);
                     marked = true;
                     break;
                 }
@@ -44,7 +44,7 @@ public class Solution {
         return 0;
     }
 
-    private void markCoasts(int[][] grid, int m, int n, int i, int j, Queue<(int, int, int)> que) {
+    private void MarkIslandAndSeedQueue(int[][] grid, int m, int n, int i, int j, Queue<(int, int, int)> que) {
         grid[i][j] = 2;
 
         foreach (var dir in dirs) {
@@ -56,11 +56,11 @@ public class Solution {
             }
 
             if (grid[ni][nj] == 0) {
-                que.Enqueue((i, j, 0));
+                que.Enqueue((ni, nj, 1));
                 continue;
             }
 
-            markCoasts(grid, m, n, ni, nj, que);
+            MarkIslandAndSeedQueue(grid, m, n, ni, nj, que);
         }
     }
 }
