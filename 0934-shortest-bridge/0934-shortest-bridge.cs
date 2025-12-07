@@ -1,5 +1,5 @@
 public class Solution {
-    private (int Row, int Col)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
+    private static readonly (int Row, int Col)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
 
     public int ShortestBridge(int[][] grid) {
         Queue<(int I, int J, int Path)> que = new Queue<(int, int, int)>();
