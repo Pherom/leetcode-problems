@@ -43,7 +43,7 @@ public class Solution {
             }
         }
 
-        while (que.Count() != 0) {
+        while (que.Count != 0) {
             var curr = que.Dequeue();
 
             foreach (var dir in dirs) {
