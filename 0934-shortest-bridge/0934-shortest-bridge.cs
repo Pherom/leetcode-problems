@@ -1,13 +1,8 @@
 public class Solution {
-    private Tuple<int, int>[] dirs = {
-        new Tuple<int, int>(0, 1),
-        new Tuple<int, int>(0, -1),
-        new Tuple<int, int>(1, 0),
-        new Tuple<int, int>(-1, 0)
-    };
+    private (int, int)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
 
     public int ShortestBridge(int[][] grid) {
-        Queue<Tuple<int, int, int>> que = new Queue<Tuple<int, int, int>>();
+        Queue<(int, int, int)> que = new Queue<(int, int, int)>();
         bool marked = false;
 
         for (int i = 0; i < grid.Length; ++i) {
@@ -30,7 +25,7 @@ public class Solution {
             int path = que.Peek().Item3;
             que.Dequeue();
 
-            foreach (Tuple<int, int> dir in dirs) {
+            foreach (var dir in dirs) {
                 int ni = i + dir.Item1;
                 int nj = j + dir.Item2;
 
@@ -43,17 +38,17 @@ public class Solution {
                 }
 
                 grid[ni][nj] = 2;
-                que.Enqueue(new Tuple<int, int, int>(ni, nj, path + 1));
+                que.Enqueue((ni, nj, path + 1));
             }
         }
 
         return 0;
     }
 
-    private void markCoasts(int[][] grid, int i, int j, Queue<Tuple<int, int, int>> que) {
+    private void markCoasts(int[][] grid, int i, int j, Queue<(int, int, int)> que) {
         grid[i][j] = 2;
 
-        foreach (Tuple<int, int> dir in dirs) {
+        foreach (var dir in dirs) {
             int ni = i + dir.Item1;
             int nj = j + dir.Item2;
 
@@ -62,7 +57,7 @@ public class Solution {
             }
 
             if (grid[ni][nj] == 0) {
-                que.Enqueue(new Tuple<int, int, int>(i, j, 0));
+                que.Enqueue((i, j, 0));
                 continue;
             }
 
