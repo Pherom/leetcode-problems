@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0706-design-hashmap](https://github.com/Pherom/leetcode-problems/tree/master/0706-design-hashmap) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
+| [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -31,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
+| [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
 ## Breadth-First Search
 |  |
@@ -39,6 +41,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0210-course-schedule-ii](https://github.com/Pherom/leetcode-problems/tree/master/0210-course-schedule-ii) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
+| [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 ## Union Find
 |  |
 | ------- |
@@ -50,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 ## Greedy
 |  |
 | ------- |
