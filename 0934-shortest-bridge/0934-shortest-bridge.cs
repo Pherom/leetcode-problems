@@ -1,8 +1,8 @@
 public class Solution {
-    private (int, int)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
+    private (int Row, int Col)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
 
     public int ShortestBridge(int[][] grid) {
-        Queue<(int, int, int)> que = new Queue<(int, int, int)>();
+        Queue<(int I, int J, int Path)> que = new Queue<(int, int, int)>();
         bool marked = false;
 
         for (int i = 0; i < grid.Length; ++i) {
@@ -20,25 +20,22 @@ public class Solution {
         }
 
         while (que.Count() != 0) {
-            int i = que.Peek().Item1;
-            int j = que.Peek().Item2;
-            int path = que.Peek().Item3;
-            que.Dequeue();
+            var curr = que.Dequeue();
 
             foreach (var dir in dirs) {
-                int ni = i + dir.Item1;
-                int nj = j + dir.Item2;
+                int ni = curr.I + dir.Row;
+                int nj = curr.J + dir.Col;
 
                 if (ni < 0 || ni >= grid.Length || nj < 0 || nj >= grid[0].Length || grid[ni][nj] == 2) {
                     continue;
                 }
 
                 if (grid[ni][nj] == 1) {
-                    return path;
+                    return curr.Path;
                 }
 
                 grid[ni][nj] = 2;
-                que.Enqueue((ni, nj, path + 1));
+                que.Enqueue((ni, nj, curr.Path + 1));
             }
         }
 
@@ -49,8 +46,8 @@ public class Solution {
         grid[i][j] = 2;
 
         foreach (var dir in dirs) {
-            int ni = i + dir.Item1;
-            int nj = j + dir.Item2;
+            int ni = i + dir.Row;
+            int nj = j + dir.Col;
 
             if (ni < 0 || ni >= grid.Length || nj < 0 || nj >= grid[0].Length || grid[ni][nj] == 2) {
                 continue;
