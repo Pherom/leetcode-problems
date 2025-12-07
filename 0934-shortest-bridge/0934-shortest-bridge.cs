@@ -56,6 +56,7 @@ public class Solution {
             }
 
             if (grid[ni][nj] == 0) {
+                grid[ni][nj] = 2;
                 que.Enqueue((ni, nj, 1));
                 continue;
             }
