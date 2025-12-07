@@ -1,12 +1,12 @@
 public class Solution {
     public int CountSubstrings(string s) {
-        int sLen = s.Length;
+        int length = s.Length;
 
         int CountPalindromesFrom(int i) {
             int count = 1;
             int j = i + 1;
 
-            for (; j < sLen; ++j) {
+            for (; j < length; ++j) {
                 if (s[j] != s[i]) {
                     break;
                 }
@@ -15,7 +15,7 @@ public class Solution {
             }
 
             if (--i >= 0) {
-                while (i >= 0 && j < sLen && s[i] == s[j]) {
+                while (i >= 0 && j < length && s[i] == s[j]) {
                     ++count;
                     --i;
                     ++j;
@@ -27,7 +27,7 @@ public class Solution {
 
         int result = 0;
 
-        for (int i = 0; i < sLen; ++i) {
+        for (int i = 0; i < length; ++i) {
             result += CountPalindromesFrom(i);
         }
 
