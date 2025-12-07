@@ -5,12 +5,34 @@ public class Solution {
         int m = grid.Length;
         int n = grid[0].Length;
         Queue<(int I, int J, int Path)> que = new Queue<(int, int, int)>();
+
+        void MarkIslandAndSeedQueue(int i, int j) {
+            grid[i][j] = 2;
+
+            foreach (var dir in dirs) {
+                int ni = i + dir.Row;
+                int nj = j + dir.Col;
+
+                if (ni < 0 || ni >= m || nj < 0 || nj >= n || grid[ni][nj] == 2) {
+                    continue;
+                }
+
+                if (grid[ni][nj] == 0) {
+                    grid[ni][nj] = 2;
+                    que.Enqueue((ni, nj, 1));
+                    continue;
+                }
+
+                MarkIslandAndSeedQueue(ni, nj);
+            }
+        }
+
         bool marked = false;
 
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 if (grid[i][j] == 1) {
-                    MarkIslandAndSeedQueue(grid, m, n, i, j, que);
+                    MarkIslandAndSeedQueue(i, j);
                     marked = true;
                     break;
                 }
@@ -42,26 +64,5 @@ public class Solution {
         }
 
         return 0;
-    }
-
-    private void MarkIslandAndSeedQueue(int[][] grid, int m, int n, int i, int j, Queue<(int, int, int)> que) {
-        grid[i][j] = 2;
-
-        foreach (var dir in dirs) {
-            int ni = i + dir.Row;
-            int nj = j + dir.Col;
-
-            if (ni < 0 || ni >= m || nj < 0 || nj >= n || grid[ni][nj] == 2) {
-                continue;
-            }
-
-            if (grid[ni][nj] == 0) {
-                grid[ni][nj] = 2;
-                que.Enqueue((ni, nj, 1));
-                continue;
-            }
-
-            MarkIslandAndSeedQueue(grid, m, n, ni, nj, que);
-        }
     }
 }
