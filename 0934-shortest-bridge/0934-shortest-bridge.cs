@@ -2,13 +2,15 @@ public class Solution {
     private static readonly (int Row, int Col)[] dirs = {(0, 1), (0, -1), (1, 0), (-1, 0)};
 
     public int ShortestBridge(int[][] grid) {
+        int m = grid.Length;
+        int n = grid[0].Length;
         Queue<(int I, int J, int Path)> que = new Queue<(int, int, int)>();
         bool marked = false;
 
-        for (int i = 0; i < grid.Length; ++i) {
-            for (int j = 0; j < grid[0].Length; ++j) {
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
                 if (grid[i][j] == 1) {
-                    markCoasts(grid, i, j, que);
+                    markCoasts(grid, m, n, i, j, que);
                     marked = true;
                     break;
                 }
@@ -26,7 +28,7 @@ public class Solution {
                 int ni = curr.I + dir.Row;
                 int nj = curr.J + dir.Col;
 
-                if (ni < 0 || ni >= grid.Length || nj < 0 || nj >= grid[0].Length || grid[ni][nj] == 2) {
+                if (ni < 0 || ni >= m || nj < 0 || nj >= n || grid[ni][nj] == 2) {
                     continue;
                 }
 
@@ -42,14 +44,14 @@ public class Solution {
         return 0;
     }
 
-    private void markCoasts(int[][] grid, int i, int j, Queue<(int, int, int)> que) {
+    private void markCoasts(int[][] grid, int m, int n, int i, int j, Queue<(int, int, int)> que) {
         grid[i][j] = 2;
 
         foreach (var dir in dirs) {
             int ni = i + dir.Row;
             int nj = j + dir.Col;
 
-            if (ni < 0 || ni >= grid.Length || nj < 0 || nj >= grid[0].Length || grid[ni][nj] == 2) {
+            if (ni < 0 || ni >= m || nj < 0 || nj >= n || grid[ni][nj] == 2) {
                 continue;
             }
 
@@ -58,7 +60,7 @@ public class Solution {
                 continue;
             }
 
-            markCoasts(grid, ni, nj, que);
+            markCoasts(grid, m, n, ni, nj, que);
         }
     }
 }
