@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0210-course-schedule-ii](https://github.com/Pherom/leetcode-problems/tree/master/0210-course-schedule-ii) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/Pherom/leetcode-problems/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
@@ -141,6 +142,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/Pherom/leetcode-problems/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
@@ -152,6 +154,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Pherom/leetcode-problems/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0543-diameter-of-binary-tree](https://github.com/Pherom/leetcode-problems/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Pherom/leetcode-problems/tree/master/0572-subtree-of-another-tree) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
