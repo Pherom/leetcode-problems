@@ -42,7 +42,7 @@ public class Solution {
 
     public IList<IList<int>> FourSum(int[] nums, int target) {
         int n = nums.Length;
-        var res = new List<List<int>>();
+        var res = new List<List<int>>(n);
         int[] curr = new int[4];
         Array.Sort(nums);
 
