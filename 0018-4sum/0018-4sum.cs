@@ -2,10 +2,10 @@ public class Solution {
     public IList<IList<int>> FourSum(int[] nums, int target) {
         int n = nums.Length;
         IList<IList<int>> res = new List<IList<int>>();
-        List<int> curr = new List<int>();
+        int[] curr = new int[4];
         Array.Sort(nums);
 
-        void kSum(long target, int k, int start) {
+        void kSum(long target, int k, int start, int addedCount) {
             if (k == 2) {
                 int left = start;
                 int right = n - 1;
@@ -14,10 +14,9 @@ public class Solution {
                     long sum = nums[left] + nums[right];
 
                     if (sum == target) {
-                        curr.Add(nums[left]);
-                        curr.Add(nums[right]);
+                        curr[addedCount] = nums[left];
+                        curr[addedCount + 1] = nums[right];
                         res.Add(new List<int>(curr));
-                        curr.RemoveRange(curr.Count - 2, 2);
 
                         do {
                             ++left;
@@ -41,13 +40,13 @@ public class Solution {
                     continue;
                 }
 
-                curr.Add(nums[i]);
-                kSum(target - nums[i], k - 1, i + 1);
-                curr.RemoveAt(curr.Count - 1);
+                curr[addedCount++] = nums[i];
+                kSum(target - nums[i], k - 1, i + 1, addedCount);
+                --addedCount;
             }
         }
 
-        kSum(target, 4, 0);
+        kSum(target, 4, 0, 0);
         return res;
     }
 }
