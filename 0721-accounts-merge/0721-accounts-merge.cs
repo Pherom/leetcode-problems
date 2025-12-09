@@ -2,7 +2,7 @@ public class Solution {
     public IList<IList<string>> AccountsMerge(IList<IList<string>> accounts) {
         Dictionary<string, int> emailToId = new Dictionary<string, int>();
         Dictionary<int, string> emailIdToName = new Dictionary<int, string>();
-        Dictionary<int, int> parent = new Dictionary<int, int>();
+        Dictionary<int, int> parent = new();
         int length = accounts.Count;
         int emailId = 0;
 
@@ -46,30 +46,29 @@ public class Solution {
             }
         }
 
-        Dictionary<int, List<string>> repToEmails = new Dictionary<int, List<string>>();
+        Dictionary<int, List<string>> repToEmails = new();
 
-        foreach (KeyValuePair<string, int> emailIdPair in emailToId) {
-            int rep = find(parent, emailIdPair.Value);
+        foreach (var (email, id) in emailToId) {
+            int rep = find(parent, id);
 
             if (!repToEmails.ContainsKey(rep)) {
-                repToEmails[rep] = new List<string>();
+                repToEmails[rep] = new();
             }
 
-            repToEmails[rep].Add(emailIdPair.Key);
+            repToEmails[rep].Add(email);
         }
 
-        foreach(List<string> emails in repToEmails.Values) {
+        foreach(var emails in repToEmails.Values) {
             emails.Sort(StringComparer.Ordinal);
         }
 
         IList<IList<string>> result  = new List<IList<string>>();
 
-        foreach (List<string> emails in repToEmails.Values) {
+        foreach (var emails in repToEmails.Values) {
             string name = emailIdToName[emailToId[emails[0]]];
-            result.Add(new List<string>());
+            result.Add(new List<string>{ name });
             
-            result.Last().Add(name);
-            foreach (string email in emails) {
+            foreach (var email in emails) {
                 result.Last().Add(email);
             }
         }
