@@ -1,6 +1,6 @@
 public class Solution {
     public int TotalNQueens(int n) {
-        var placedQueens = new int[n];
+        var placedQueens = new int[n + 1];
 
         int rec(int row) {
             if (row > n) {
@@ -13,7 +13,7 @@ public class Solution {
                 bool conflict = false;
 
                 for (int otherRow = 1; otherRow < row; ++otherRow) {
-                    int otherCol = placedQueens[otherRow - 1];
+                    int otherCol = placedQueens[otherRow];
 
                     if (otherCol == col || otherCol + otherRow == col + row || otherCol - otherRow == col - row) {
                         conflict = true;
@@ -25,9 +25,9 @@ public class Solution {
                     continue;
                 }
 
-                placedQueens[row - 1] = col;
+                placedQueens[row] = col;
                 count += rec(row + 1);
-                placedQueens[row - 1] = 0;
+                placedQueens[row] = 0;
             }
 
             return count;
