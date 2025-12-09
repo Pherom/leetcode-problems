@@ -1,18 +1,20 @@
 public class Solution {
     public int TotalNQueens(int n) {
-        var placedQueens = new List<(int R, int C)>(n);
+        var placedQueens = new int[n];
 
         int rec(int row) {
-            if (row == n) {
+            if (row > n) {
                 return 1;
             }
 
             int count = 0;
 
-            for (int col = 0; col < n; ++col) {
+            for (int col = 1; col <= n; ++col) {
                 bool conflict = false;
 
-                foreach (var (otherRow, otherCol) in placedQueens) {
+                for (int otherRow = 1; otherRow < row; ++otherRow) {
+                    int otherCol = placedQueens[otherRow - 1];
+
                     if (otherCol == col || otherCol + otherRow == col + row || otherCol - otherRow == col - row) {
                         conflict = true;
                         break;
@@ -23,14 +25,14 @@ public class Solution {
                     continue;
                 }
 
-                placedQueens.Add((row, col));
+                placedQueens[row - 1] = col;
                 count += rec(row + 1);
-                placedQueens.RemoveAt(placedQueens.Count - 1);
+                placedQueens[row - 1] = 0;
             }
 
             return count;
         }
 
-        return rec(0);
+        return rec(1);
     }
 }
