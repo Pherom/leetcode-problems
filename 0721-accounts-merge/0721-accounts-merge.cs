@@ -18,7 +18,7 @@ public class Solution {
                 }
 
                 int id = emailToId[email];
-                parent[id] = emailToId[account[1]];
+                parent[id] = id;
                 emailIdToName[id] = account[0];
             }
         }
@@ -50,7 +50,7 @@ public class Solution {
 
         foreach (KeyValuePair<string, int> emailIdPair in emailToId) {
             int rep = find(parent, emailIdPair.Value);
-            
+
             if (!repToEmails.ContainsKey(rep)) {
                 repToEmails[rep] = new List<string>();
             }
