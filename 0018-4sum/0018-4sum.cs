@@ -2,7 +2,7 @@ public class Solution {
     public IList<IList<int>> FourSum(int[] nums, int target) {
         int n = nums.Length;
         IList<IList<int>> res = new List<IList<int>>();
-        IList<int> curr = new List<int>();
+        List<int> curr = new List<int>();
         Array.Sort(nums);
 
         void kSum(long target, int k, int start) {
@@ -17,8 +17,7 @@ public class Solution {
                         curr.Add(nums[left]);
                         curr.Add(nums[right]);
                         res.Add(new List<int>(curr));
-                        curr.RemoveAt(curr.Count - 1);
-                        curr.RemoveAt(curr.Count - 1);
+                        curr.RemoveRange(curr.Count - 2, 2);
 
                         do {
                             ++left;
