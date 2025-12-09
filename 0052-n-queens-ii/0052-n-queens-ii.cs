@@ -1,6 +1,6 @@
 public class Solution {
     public int TotalNQueens(int n) {
-        var placedQueens = new List<(int R, int C)>();
+        var placedQueens = new List<(int R, int C)>(n);
 
         int rec(int row) {
             if (row == n) {
