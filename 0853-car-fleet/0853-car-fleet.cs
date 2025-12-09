@@ -1,20 +1,13 @@
 public class Solution {
     public int CarFleet(int target, int[] position, int[] speed) {
         int n = position.Length;
-        var posTime = new (int Pos, double Time)[n];
+        var posTime = position.Zip(speed, (p, s) => (Pos: p, Time: (double)(target - p) / s))
+                              .OrderByDescending(pt => pt.Pos)
+                              .ToList();
 
-        for (int i = 0; i < n; ++i) {
-            double time = (double)(target - position[i]) / speed[i];
-            posTime[i] = (position[i], time);
-        }
-
-        Array.Sort(posTime, (first, second) => {
-            return first.Pos.CompareTo(second.Pos);
-        });
-
-        double currTime = posTime[n - 1].Time;
+        double currTime = posTime[0].Time;
         int fleets = n;
-        for (int i = n - 2; i >= 0; --i) {
+        for (int i = 1; i < n; ++i) {
             if (posTime[i].Time <= currTime) {
                 --fleets;
             } else {
