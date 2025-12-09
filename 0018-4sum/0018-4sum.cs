@@ -1,5 +1,5 @@
 public class Solution {
-    private static void kSum(IList<IList<int>> res, int[] curr, int[] nums, int n, long target, int k, int start, int addedCount) {
+    private static void kSum(List<List<int>> res, int[] curr, int[] nums, int n, long target, int k, int start, int addedCount) {
         if (k == 2) {
             int left = start;
             int right = n - 1;
@@ -42,11 +42,11 @@ public class Solution {
 
     public IList<IList<int>> FourSum(int[] nums, int target) {
         int n = nums.Length;
-        IList<IList<int>> res = new List<IList<int>>();
+        var res = new List<List<int>>();
         int[] curr = new int[4];
         Array.Sort(nums);
 
         kSum(res, curr, nums, n, target, 4, 0, 0);
-        return res;
+        return res.ToArray();
     }
 }
