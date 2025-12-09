@@ -28,27 +28,29 @@ public class Solution {
     public int MinDistance(string word1, string word2) {
         int n1 = word1.Length;
         int n2 = word2.Length;
-        var dp = new int[n1 + 1, n2 + 1];
-
-        for (int i = 0; i <= n1; ++i) {
-            dp[i, n2] = n1 - i;
-        }
+        var dp = new int[2, n2 + 1];
 
         for (int j = 0; j <= n2; ++j) {
-            dp[n1, j] = n2 - j;
+            dp[1, j] = n2 - j;
         }
 
         for (int i = n1 - 1; i >= 0; --i) {
+            dp[0, n2] = n1 - i;
+
             for (int j = n2 - 1; j >= 0; --j) {
                 if (word1[i] == word2[j]) {
-                    dp[i, j] = dp[i + 1, j + 1];
+                    dp[0, j] = dp[1, j + 1];
                     continue;
                 }
 
-                dp[i, j] = 1 + Math.Min(dp[i + 1, j], Math.Min(dp[i + 1, j + 1], dp[i, j + 1]));
+                dp[0, j] = 1 + Math.Min(dp[1, j], Math.Min(dp[1, j + 1], dp[0, j + 1]));
+            }
+
+            for (int j = 0; j <= n2; ++j) {
+                dp[1, j] = dp[0, j];
             }
         }
 
-        return dp[0, 0];
+        return dp[1, 0];
     }
 }
