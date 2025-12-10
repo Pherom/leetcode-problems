@@ -13,6 +13,7 @@ struct ListNode* reverseList(struct ListNode* head) {
     struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
 
     if (dummy == NULL) {
+        // Not ideal but can't change function signature
         return NULL;
     }
 
