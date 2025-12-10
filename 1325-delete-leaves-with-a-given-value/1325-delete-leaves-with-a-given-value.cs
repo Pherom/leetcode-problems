@@ -13,13 +13,13 @@
  */
 public class Solution {
     public TreeNode RemoveLeafNodes(TreeNode root, int target) {
-        TreeNode rec(TreeNode curr, TreeNode parent, int target) {
+        TreeNode rec(TreeNode curr, int target) {
             if (curr == null) {
                 return null;
             }
 
-            curr.left = rec(curr.left, curr, target);
-            curr.right = rec(curr.right, curr, target);
+            curr.left = rec(curr.left, target);
+            curr.right = rec(curr.right, target);
 
             if (curr.left == null && curr.right == null && curr.val == target) {
                 return null;
@@ -28,6 +28,6 @@ public class Solution {
             return curr;
         }
 
-        return rec(root, null, target);
+        return rec(root, target);
     }
 }
