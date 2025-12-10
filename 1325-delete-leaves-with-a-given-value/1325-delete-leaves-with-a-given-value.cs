@@ -18,19 +18,11 @@ public class Solution {
                 return null;
             }
 
-            rec(curr.left, curr, target);
-            rec(curr.right, curr, target);
+            curr.left = rec(curr.left, curr, target);
+            curr.right = rec(curr.right, curr, target);
 
             if (curr.left == null && curr.right == null && curr.val == target) {
-                if (parent == null) {
-                    return null;
-                }
-
-                if (parent.left == curr) {
-                    parent.left = null;
-                } else {
-                    parent.right = null;
-                }
+                return null;
             }
 
             return curr;
