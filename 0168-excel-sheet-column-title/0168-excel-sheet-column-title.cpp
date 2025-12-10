@@ -3,13 +3,13 @@ public:
     string convertToTitle(int columnNumber) {
         string result{};
 
-        while (columnNumber > 0) {
-            --columnNumber;
+        while (columnNumber --> 0) {
             char c = (columnNumber % 26) + 'A';
             columnNumber /= 26;
-            result = c + result;
+            result.push_back(c);
         }
 
+        std::reverse(result.begin(), result.end());
         return result;
     }
 };
