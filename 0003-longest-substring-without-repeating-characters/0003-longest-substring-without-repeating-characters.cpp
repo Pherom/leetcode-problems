@@ -7,30 +7,28 @@ public:
             return n;
         }
 
-        unordered_set<char> charsInCurr{};
-        charsInCurr.insert(s[0]);
+        array<bool, numeric_limits<unsigned char>::max() + 1> charsInCurr{ false };
+        charsInCurr[static_cast<unsigned char>(s[0])] = true;
 
         size_t left = 0;
         size_t right = 1;
         size_t longest = 1;
 
         while (right < n) {
-            char contender = s[right];
+            unsigned char contender = static_cast<unsigned char>(s[right]);
 
-            auto it = charsInCurr.find(contender);
-
-            if (it == charsInCurr.end()) {
-                charsInCurr.insert(contender);
+            if (!charsInCurr[contender]) {
+                charsInCurr[contender] = true;
                 ++right;
                 longest = std::max(longest, right - left);
             } else {
                 while (s[left] != contender) {
-                    it = charsInCurr.find(s[left]);
+                    unsigned char leftChar = static_cast<unsigned char>(s[left]);
 
-                    if (it != charsInCurr.end()) {
-                        charsInCurr.erase(it);
+                    if (charsInCurr[leftChar]) {
+                        charsInCurr[leftChar] = false;
                     }
-                    
+
                     ++left;
                 }
 
