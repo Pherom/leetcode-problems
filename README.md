@@ -220,6 +220,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0092-reverse-linked-list-ii](https://github.com/Pherom/leetcode-problems/tree/master/0092-reverse-linked-list-ii) |
+| [0206-reverse-linked-list](https://github.com/Pherom/leetcode-problems/tree/master/0206-reverse-linked-list) |
 | [0706-design-hashmap](https://github.com/Pherom/leetcode-problems/tree/master/0706-design-hashmap) |
 ## Prefix Sum
 |  |
@@ -229,4 +230,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0219-contains-duplicate-ii](https://github.com/Pherom/leetcode-problems/tree/master/0219-contains-duplicate-ii) |
+## Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/Pherom/leetcode-problems/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->
