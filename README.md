@@ -102,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0007-reverse-integer](https://github.com/Pherom/leetcode-problems/tree/master/0007-reverse-integer) |
 | [0168-excel-sheet-column-title](https://github.com/Pherom/leetcode-problems/tree/master/0168-excel-sheet-column-title) |
 | [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
+| [0223-rectangle-area](https://github.com/Pherom/leetcode-problems/tree/master/0223-rectangle-area) |
 ## Hash Table
 |  |
 | ------- |
@@ -234,4 +235,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0206-reverse-linked-list](https://github.com/Pherom/leetcode-problems/tree/master/0206-reverse-linked-list) |
+## Geometry
+|  |
+| ------- |
+| [0223-rectangle-area](https://github.com/Pherom/leetcode-problems/tree/master/0223-rectangle-area) |
 <!---LeetCode Topics End-->
