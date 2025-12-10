@@ -4,11 +4,11 @@ public:
         size_t size = s.size();
         array<int, 26> freq{0};
 
-        int count = 0;
-
         for (int i = 0; i < size; ++i) {
             ++freq[t[i] - 'a'];
         }
+
+        int count = 0;
 
         for (int i = 0; i < size; ++i) {
             if (freq[s[i] - 'a'] == 0) {
