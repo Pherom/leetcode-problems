@@ -109,6 +109,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+| [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0219-contains-duplicate-ii](https://github.com/Pherom/leetcode-problems/tree/master/0219-contains-duplicate-ii) |
 | [0706-design-hashmap](https://github.com/Pherom/leetcode-problems/tree/master/0706-design-hashmap) |
@@ -181,6 +182,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
@@ -221,6 +223,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0092-reverse-linked-list-ii](https://github.com/Pherom/leetcode-problems/tree/master/0092-reverse-linked-list-ii) |
+| [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
 | [0206-reverse-linked-list](https://github.com/Pherom/leetcode-problems/tree/master/0206-reverse-linked-list) |
 | [0706-design-hashmap](https://github.com/Pherom/leetcode-problems/tree/master/0706-design-hashmap) |
 ## Prefix Sum
@@ -239,4 +242,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0223-rectangle-area](https://github.com/Pherom/leetcode-problems/tree/master/0223-rectangle-area) |
+## Doubly-Linked List
+|  |
+| ------- |
+| [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
 <!---LeetCode Topics End-->
