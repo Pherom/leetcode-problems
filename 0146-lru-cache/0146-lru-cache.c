@@ -46,7 +46,7 @@ LRUCache* lRUCacheCreate(int capacity) {
     }
 
     cache->map = NULL;
-    cache->head = (DListNode*)malloc(sizeof(DListNode)); //dummy
+    cache->head = (DListNode*)malloc(sizeof(DListNode)); // sentinel
 
     if (cache->head == NULL) {
         free(cache);
@@ -55,7 +55,7 @@ LRUCache* lRUCacheCreate(int capacity) {
 
     cache->head->prev = cache->head;
 
-    cache->tail = (DListNode*)malloc(sizeof(DListNode));
+    cache->tail = (DListNode*)malloc(sizeof(DListNode)); // sentinel
 
     if (cache->tail == NULL) {
         free(cache->head);
