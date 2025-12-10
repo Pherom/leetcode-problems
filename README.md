@@ -98,6 +98,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/Pherom/leetcode-problems/tree/master/0007-reverse-integer) |
+| [0168-excel-sheet-column-title](https://github.com/Pherom/leetcode-problems/tree/master/0168-excel-sheet-column-title) |
 | [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 ## Hash Table
 |  |
@@ -118,6 +119,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0125-valid-palindrome](https://github.com/Pherom/leetcode-problems/tree/master/0125-valid-palindrome) |
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+| [0168-excel-sheet-column-title](https://github.com/Pherom/leetcode-problems/tree/master/0168-excel-sheet-column-title) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0647-palindromic-substrings](https://github.com/Pherom/leetcode-problems/tree/master/0647-palindromic-substrings) |
