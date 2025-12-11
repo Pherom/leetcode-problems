@@ -10,9 +10,21 @@ char* createCopyOf(char* str, size_t len) {
     return res;
 }
 
+char* createEmptyStr() {
+    char* res = (char*)malloc(sizeof(char));
+
+    if (res == NULL) {
+        return NULL;
+    }
+
+    res[0] = '\0';
+    return res;
+}
+
 char* longestCommonPrefix(char** strs, int strsSize) {
     if (strs == NULL || strsSize == 0) {
-        return "";
+        // We require the user to free the result so no literal string is returned;
+        return createEmptyStr();
     }
 
     char const* first = strs[0];
@@ -30,7 +42,7 @@ char* longestCommonPrefix(char** strs, int strsSize) {
                 char* res = (char*)malloc(sizeof(char) * (i + 1));
 
                 if (res == NULL) {
-                    return "";
+                    return createEmptyStr();
                 }
 
                 res[i] = '\0';
