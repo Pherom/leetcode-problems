@@ -1,21 +1,21 @@
 class SnapshotArray {
 private:
-    vector<map<int, int>> vec;
+    vector<vector<pair<int, int>>> versionsByIdx;
     int snapsTaken;
 
 public:
     SnapshotArray(int length)
-    : vec(length, map<int, int>{})
+    : versionsByIdx(length, vector<pair<int, int>>{})
     , snapsTaken{0}
     {}
     
     void set(int index, int val) {
-        auto it = vec[index].find(snapsTaken);
+        vector<pair<int ,int>>& versions = versionsByIdx[index];
 
-        if (it == vec[index].end()) {
-            vec[index].insert({snapsTaken, val});
+        if (!versions.empty() && versions.back().first == snapsTaken) {
+            versions.back().second = val;
         } else {
-            vec[index][snapsTaken] = val;
+            versions.push_back({snapsTaken, val});
         }
     }
     
@@ -24,13 +24,27 @@ public:
     }
     
     int get(int index, int snap_id) {
-        auto it = vec[index].upper_bound(snap_id);
+        vector<pair<int, int>>& versions = versionsByIdx[index];
+        int left = 0;
+        int right = versions.size() - 1;
 
-        if (it == vec[index].begin()) {
+        int floor_idx = -1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (versions[mid].first <= snap_id) {
+                floor_idx = mid;
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        if (floor_idx == -1) {
             return 0;
         }
 
-        return std::prev(it)->second;
+        return versions[floor_idx].second;
     }
 };
 
