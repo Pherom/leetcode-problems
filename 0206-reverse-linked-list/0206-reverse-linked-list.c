@@ -5,15 +5,15 @@
  *     struct ListNode *next;
  * };
  */
+ // dummy->0->curr->0->0
 struct ListNode* reverseList(struct ListNode* head) {
-    if (head == NULL || head->next == NULL) {
-        return head;
+    if (head == NULL) {
+        return NULL;
     }
 
     struct ListNode* dummy = (struct ListNode*)malloc(sizeof(struct ListNode));
-
+    
     if (dummy == NULL) {
-        // Not ideal but can't change function signature
         return NULL;
     }
 
