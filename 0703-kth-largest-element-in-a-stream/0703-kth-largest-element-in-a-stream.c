@@ -1,6 +1,7 @@
 #define LEFT_CHILD(node) ( ( node ) * 2 + 1 )
 #define RIGHT_CHILD(node) ( ( node ) * 2 + 2 )
 #define PARENT(node) ( (( node ) - 1) / 2 )
+#define LOWEST_NON_LEAF(heapSize) ( ( heapSize ) / 2 - 1 )
 
 #define SWAP(first, second, type) {             \
             type temp = *( first );             \
@@ -22,7 +23,7 @@ static void bubbleUp(int* minHeap, int size) {
 static void bubbleDown(int* minHeap, int start, int size) {
     int curr = start;
 
-    while (curr <= size / 2 - 1) {
+    while (curr <= LOWEST_NON_LEAF(size)) {
         int left = minHeap[LEFT_CHILD(curr)];
         int val = minHeap[curr];
 
@@ -49,7 +50,7 @@ static void bubbleDown(int* minHeap, int start, int size) {
 }
 
 void heapify(int* nums, int size) {
-    for (int curr = size / 2 - 1; curr >= 0; --curr) {
+    for (int curr = LOWEST_NON_LEAF(size); curr >= 0; --curr) {
         bubbleDown(nums, curr, size);
     }
 }
