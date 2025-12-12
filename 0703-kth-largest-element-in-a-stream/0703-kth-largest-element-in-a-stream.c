@@ -49,7 +49,7 @@ static void bubbleDown(int* minHeap, int start, int size) {
     }
 }
 
-void heapify(int* nums, int size) {
+static void heapify(int* nums, int size) {
     for (int curr = LOWEST_NON_LEAF(size); curr >= 0; --curr) {
         bubbleDown(nums, curr, size);
     }
@@ -66,6 +66,10 @@ int kthLargestAdd(KthLargest* obj, int val);
 void kthLargestFree(KthLargest* obj);
 
 KthLargest* kthLargestCreate(int k, int* nums, int numsSize) {
+    if ((nums == NULL && numsSize > 0) || k <= 0) {
+        return NULL;
+    }
+
     int m = MIN(k, numsSize);
     int* minHeap = (int*)malloc(sizeof(int) * k);
 
@@ -80,7 +84,10 @@ KthLargest* kthLargestCreate(int k, int* nums, int numsSize) {
         return NULL;
     }
 
-    memcpy(minHeap, nums, sizeof(int) * m);
+    if (nums != NULL) {
+        memcpy(minHeap, nums, sizeof(int) * m);
+    }
+
     heapify(minHeap, m);
 
     res->minHeap = minHeap;
