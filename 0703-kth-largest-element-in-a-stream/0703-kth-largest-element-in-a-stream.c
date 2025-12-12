@@ -98,9 +98,7 @@ int kthLargestAdd(KthLargest* obj, int val) {
     if (obj->size == obj->capacity && val > obj->minHeap[0]) {
         obj->minHeap[0] = val;
         bubbleDown(obj->minHeap, 0, obj->size);
-    }
-
-    if (obj->size < obj->capacity) {
+    } else if (obj->size < obj->capacity) {
         obj->minHeap[obj->size] = val;
         bubbleUp(obj->minHeap, ++obj->size);
     }
