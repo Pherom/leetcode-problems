@@ -10,6 +10,7 @@ typedef struct {
     SnapValPair* arr;
     int size;
     int capacity;
+    int growBy;
 } SnapValArray;
 
 typedef struct {
@@ -39,6 +40,7 @@ SnapValArray* snapValArrayCreate(int initialCapacity) {
     res->arr = arr;
     res->capacity = initialCapacity;
     res->size = 0;
+    res->growBy = 1;
 
     return res;
 }
@@ -62,7 +64,7 @@ bool snapValArrayAdd(SnapValArray* obj, SnapValPair pair) {
     }
 
     if (obj->size == obj->capacity) {
-        int newCapacity = obj->capacity * 2;
+        int newCapacity = obj->capacity + obj->growBy;
         SnapValPair* temp = (SnapValPair*)realloc(obj->arr, sizeof(SnapValPair) * newCapacity);
 
         if (temp == NULL) {
@@ -71,6 +73,7 @@ bool snapValArrayAdd(SnapValArray* obj, SnapValPair pair) {
 
         obj->arr = temp;
         obj->capacity = newCapacity;
+        obj->growBy *= 2;
     }
 
     obj->arr[obj->size++] = pair;
