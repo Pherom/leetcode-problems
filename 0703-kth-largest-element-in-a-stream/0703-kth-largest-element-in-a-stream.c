@@ -2,6 +2,7 @@
 #define RIGHT_CHILD(node) ( ( node ) * 2 + 2 )
 #define PARENT(node) ( (( node ) - 1) / 2 )
 #define LOWEST_NON_LEAF(heapSize) ( ( heapSize ) / 2 - 1 )
+#define ADD_FAILED 0xFFFFFFFF
 
 #define SWAP(first, second, type) {             \
             type temp = *( first );             \
@@ -102,6 +103,10 @@ KthLargest* kthLargestCreate(int k, int* nums, int numsSize) {
 }
 
 int kthLargestAdd(KthLargest* obj, int val) {
+    if (obj == NULL) {
+        return ADD_FAILED;
+    }
+
     if (obj->size == obj->capacity && val > obj->minHeap[0]) {
         obj->minHeap[0] = val;
         bubbleDown(obj->minHeap, 0, obj->size);
