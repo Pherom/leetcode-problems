@@ -29,7 +29,6 @@ MyListNode* find(MyListNode* head, int key) {
     MyListNode* curr = head;
 
     while (curr != NULL) {
-        printf("%d\n", curr->key);
         if (curr->key == key) {
             return curr;
         }
