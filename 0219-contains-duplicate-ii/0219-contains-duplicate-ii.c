@@ -136,11 +136,7 @@ void dictionaryFree(Dictionary** dict) {
 }
 
 static int hash(int key) {
-    if (key < 0) {
-        key = -key;
-    }
-
-    return key % DICT_ARR_SIZE;
+    return (int)(((unsigned int)key) % DICT_ARR_SIZE);
 }
 
 bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
