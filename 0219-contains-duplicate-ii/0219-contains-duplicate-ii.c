@@ -1,4 +1,4 @@
-#define DICT_ARR_SIZE 1000
+#define DICT_ARR_SIZE 10000
 
 typedef struct Node Node;
 
