@@ -25,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
 | [0853-car-fleet](https://github.com/Pherom/leetcode-problems/tree/master/0853-car-fleet) |
+| [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
 | [1146-snapshot-array](https://github.com/Pherom/leetcode-problems/tree/master/1146-snapshot-array) |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 ## Greedy
 |  |
@@ -262,4 +264,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1347-minimum-number-of-steps-to-make-two-strings-anagram](https://github.com/Pherom/leetcode-problems/tree/master/1347-minimum-number-of-steps-to-make-two-strings-anagram) |
+## Simulation
+|  |
+| ------- |
+| [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 <!---LeetCode Topics End-->
