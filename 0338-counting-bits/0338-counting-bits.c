@@ -16,13 +16,7 @@ int* countBits(int n, int* returnSize) {
     unsigned int bound = 1;
 
     result[0] = 0;
-
-    if (n == 0) {
-        return result;
-    }
-
-    result[1] = 1;
-    for (int i = 2; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) {
         if (i == (bound << 1)) {
             bound <<= 1;
             result[i] = 1;
