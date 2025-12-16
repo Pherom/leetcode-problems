@@ -18,11 +18,10 @@ int* countBits(int n, int* returnSize) {
     result[0] = 0;
     for (int i = 1; i <= n; ++i) {
         if (i == (bound << 1)) {
-            bound <<= 1;
-            result[i] = 1;
-        } else {
-            result[i] = 1 + result[i - bound];
+            bound = i;
         }
+        
+        result[i] = 1 + result[i - bound];
     }
 
     return result;
