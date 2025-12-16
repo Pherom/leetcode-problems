@@ -150,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0072-edit-distance](https://github.com/Pherom/leetcode-problems/tree/master/0072-edit-distance) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+| [0338-counting-bits](https://github.com/Pherom/leetcode-problems/tree/master/0338-counting-bits) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
 | [0647-palindromic-substrings](https://github.com/Pherom/leetcode-problems/tree/master/0647-palindromic-substrings) |
 ## Backtracking
@@ -210,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0190-reverse-bits](https://github.com/Pherom/leetcode-problems/tree/master/0190-reverse-bits) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
+| [0338-counting-bits](https://github.com/Pherom/leetcode-problems/tree/master/0338-counting-bits) |
 ## Binary Search Tree
 |  |
 | ------- |
