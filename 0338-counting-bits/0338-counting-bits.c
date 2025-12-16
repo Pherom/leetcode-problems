@@ -1,9 +1,37 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-// #define MAX_N 100000
+static void buildLUT(unsigned char* lut) {
+    lut[0] = 0;
 
-// int result[MAX_N + 1] = {0};
+    unsigned char curr = 1;
+
+    while (curr > 0) {
+        unsigned char copy = curr;
+
+        while (copy > 0) {
+            if ((copy & 1) > 0) {
+                ++lut[curr];
+            }
+
+            copy >>= 1;
+        }
+
+        ++curr;
+    }
+}
+
+static unsigned char countBitsByte(unsigned char byte) {
+    static unsigned char lut[1 << CHAR_BIT];
+    static bool lutBuilt = false;
+
+    if (!lutBuilt) {
+        buildLUT(lut);
+        lutBuilt = true;
+    }
+
+    return lut[byte];
+}
 
 int* countBits(int n, int* returnSize) {
     if (returnSize == NULL) {
@@ -18,18 +46,13 @@ int* countBits(int n, int* returnSize) {
 
     *returnSize = n + 1;
 
-    // memset(result, 0, *returnSize * sizeof(int));
-
     result[0] = 0;
     for (int i = 1; i <= n; ++i) {
         unsigned int copy = i;
 
         while (copy > 0) {
-            if ((copy & 1) > 0) {
-                ++result[i];
-            }
-
-            copy >>= 1;
+            result[i] += countBitsByte(copy);
+            copy >>= CHAR_BIT;
         }
     }
 
