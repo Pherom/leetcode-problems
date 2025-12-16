@@ -1,18 +1,24 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-#define MAX_N 100000
+// #define MAX_N 100000
 
-int result[MAX_N + 1] = {0};
+// int result[MAX_N + 1] = {0};
 
 int* countBits(int n, int* returnSize) {
     if (returnSize == NULL) {
         return NULL;
     }
 
+    int* result = (int*)calloc(n + 1, sizeof(int));
+
+    if (result == NULL) {
+        return NULL;
+    }
+
     *returnSize = n + 1;
 
-    memset(result, 0, *returnSize * sizeof(int));
+    // memset(result, 0, *returnSize * sizeof(int));
 
     result[0] = 0;
     for (int i = 1; i <= n; ++i) {
