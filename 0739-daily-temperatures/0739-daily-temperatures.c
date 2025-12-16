@@ -4,6 +4,8 @@
 
 #define TEMPERATURES_MAX_SIZE 100001
 
+int result[TEMPERATURES_MAX_SIZE];
+
 int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize) {
     if (temperatures == NULL || temperaturesSize < 0 || returnSize == NULL) {
         return NULL;
@@ -16,12 +18,12 @@ int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize)
     //     return NULL;
     // }
 
-    int* result = (int*)malloc(sizeof(int) * temperaturesSize);
+    // int* result = (int*)malloc(sizeof(int) * temperaturesSize);
 
-    if (result == NULL) {
-        free(stack);
-        return NULL;
-    }
+    // if (result == NULL) {
+    //     free(stack);
+    //     return NULL;
+    // }
 
     int stackSize = 0;
 
