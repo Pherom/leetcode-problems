@@ -1,16 +1,20 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
+
+#define TEMPERATURES_MAX_SIZE 100001
+
 int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize) {
     if (temperatures == NULL || temperaturesSize < 0 || returnSize == NULL) {
         return NULL;
     }
 
-    int* stack = (int*)malloc(sizeof(int) * temperaturesSize);
+    // int* stack = (int*)malloc(sizeof(int) * temperaturesSize);
+    int stack[TEMPERATURES_MAX_SIZE];
 
-    if (stack == NULL) {
-        return NULL;
-    }
+    // if (stack == NULL) {
+    //     return NULL;
+    // }
 
     int* result = (int*)malloc(sizeof(int) * temperaturesSize);
 
@@ -35,7 +39,7 @@ int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize)
         stack[stackSize++] = i;
     }
 
-    free(stack);
+    // free(stack);
     *returnSize = temperaturesSize;
     return result;
 }
