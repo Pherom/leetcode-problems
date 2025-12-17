@@ -25,50 +25,35 @@ int minDistance(char* word1, char* word2) {
     size_t size1 = strlen(word1);
     size_t size2 = strlen(word2);
 
-    int** dp = (int**)malloc(sizeof(int*) * (size1 + 1));
+    int* dp = (int*)malloc(sizeof(int) * (size2 + 1));
 
     if (dp == NULL) {
         return -1;
     }
 
-    for (int i = 0; i <= size1; ++i) {
-        dp[i] = (int*)malloc(sizeof(int) * (size2 + 1));
-
-        if (dp[i] == NULL) {
-            for (int j = 0; j < i; ++j) {
-                free(dp[j]);
-            }
-
-            free(dp);
-            return -1;
-        }
-    }
-
-    for (int i = 0; i <= size1; ++i) {
-        dp[i][size2] = size1 - i;
-    }
-
     for (int j = 0; j <= size2; ++j) {
-        dp[size1][j] = size2 - j;
+        dp[j] = size2 - j;
     }
 
     for (int i = size1 - 1; i >= 0; --i) {
+        int diag = dp[size2];
+        dp[size2] = size1 - i;
+
         for (int j = size2 - 1; j >= 0; --j) {
+            int temp = dp[j];
+
             if (word1[i] == word2[j]) {
-                dp[i][j] = dp[i + 1][j + 1];
+                dp[j] = diag;
+                diag = temp;
                 continue;
             }
 
-            dp[i][j] = 1 + MIN(dp[i][j + 1], MIN(dp[i + 1][j + 1], dp[i + 1][j]));
+            dp[j] = 1 + MIN(dp[j], MIN(dp[j + 1], diag));
+            diag = temp;
         }
     }
 
-    int result = dp[0][0];
-
-    for (int i = 0; i < size1; ++i) {
-        free(dp[i]);
-    }
-
+    int result = dp[0];
     free(dp);
     return result;
 }
