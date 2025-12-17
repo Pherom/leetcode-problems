@@ -10,7 +10,7 @@ void reverse(char* str, size_t size) {
     char* left = str;
     char* right = str + size - 1;
 
-    while (left != right && left != right + 1) {
+    while (right - left > 0) {
         SWAP(left, right, char);
         ++left;
         --right;
