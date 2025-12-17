@@ -112,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0007-reverse-integer](https://github.com/Pherom/leetcode-problems/tree/master/0007-reverse-integer) |
 | [0048-rotate-image](https://github.com/Pherom/leetcode-problems/tree/master/0048-rotate-image) |
+| [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0168-excel-sheet-column-title](https://github.com/Pherom/leetcode-problems/tree/master/0168-excel-sheet-column-title) |
 | [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 | [0223-rectangle-area](https://github.com/Pherom/leetcode-problems/tree/master/0223-rectangle-area) |
@@ -134,6 +135,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Pherom/leetcode-problems/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0014-longest-common-prefix](https://github.com/Pherom/leetcode-problems/tree/master/0014-longest-common-prefix) |
+| [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0072-edit-distance](https://github.com/Pherom/leetcode-problems/tree/master/0072-edit-distance) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0125-valid-palindrome](https://github.com/Pherom/leetcode-problems/tree/master/0125-valid-palindrome) |
@@ -209,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0190-reverse-bits](https://github.com/Pherom/leetcode-problems/tree/master/0190-reverse-bits) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [0338-counting-bits](https://github.com/Pherom/leetcode-problems/tree/master/0338-counting-bits) |
@@ -275,5 +278,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 <!---LeetCode Topics End-->
