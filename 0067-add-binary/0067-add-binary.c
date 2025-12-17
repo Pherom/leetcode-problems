@@ -6,9 +6,9 @@
             *( second ) = temp;         \
         }
 
-void reverse(char* str, size_t size) {
+void reverse(char* str, char* end) {
     char* left = str;
-    char* right = str + size - 1;
+    char* right = end - 1;
 
     while (right - left > 0) {
         SWAP(left, right, char);
@@ -28,36 +28,36 @@ char* addBinary(char* a, char* b) {
         return NULL;
     }
 
-    size_t aCurr = aSize;
-    size_t bCurr = bSize;
-    size_t resCurr = 0;
+    char* aCurr = a + aSize - 1;
+    char* bCurr = b + bSize - 1;
+    char* resCurr = res;
     unsigned char carry = 0;
 
-    while (aCurr > 0 && bCurr > 0) {
-        unsigned char aBit = a[--aCurr] - '0';
-        unsigned char bBit = b[--bCurr] - '0';
+    while (aCurr - a >= 0 && bCurr - b >= 0) {
+        unsigned char aBit = *(aCurr--) - '0';
+        unsigned char bBit = *(bCurr--) - '0';
 
-        res[resCurr++] = aBit ^ bBit ^ carry + '0';
+        *(resCurr++) = aBit ^ bBit ^ carry + '0';
         carry = (aBit & bBit) | (aBit & carry) | (bBit & carry);
     }
 
-    while (aCurr > 0) {
-        unsigned char aBit = a[--aCurr] - '0';
-        res[resCurr++] = aBit ^ carry + '0';
+    while (aCurr - a >= 0) {
+        unsigned char aBit = *(aCurr--) - '0';
+        *(resCurr++) = aBit ^ carry + '0';
         carry = aBit & carry;
     }
  
-    while (bCurr > 0) {
-        unsigned char bBit = b[--bCurr] - '0';
-        res[resCurr++] = bBit ^ carry + '0';
+    while (bCurr - b >= 0) {
+        unsigned char bBit = *(bCurr--) - '0';
+        *(resCurr++) = bBit ^ carry + '0';
         carry = bBit & carry;
     }
 
     if (carry > 0) {
-        res[resCurr++] = '1';
+        *(resCurr++) = '1';
     }
 
-    res[resCurr] = '\0';
+    *resCurr = '\0';
 
     reverse(res, resCurr);
     return res;
