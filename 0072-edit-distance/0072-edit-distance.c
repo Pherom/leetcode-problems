@@ -44,11 +44,10 @@ int minDistance(char* word1, char* word2) {
 
             if (word1[i] == word2[j]) {
                 dp[j] = diag;
-                diag = temp;
-                continue;
+            } else {
+                 dp[j] = 1 + MIN(dp[j], MIN(dp[j + 1], diag));
             }
-
-            dp[j] = 1 + MIN(dp[j], MIN(dp[j + 1], diag));
+           
             diag = temp;
         }
     }
