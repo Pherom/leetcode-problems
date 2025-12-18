@@ -32,15 +32,15 @@ public class Solution {
                 }
             }
 
+            ++time;
+
             if (pq.Count > 0) {
                 int count = pq.Dequeue();
 
                 if (--count > 0) {
-                    que.Enqueue((time + n + 1, count));
+                    que.Enqueue((time + n, count));
                 }
             }
-
-            ++time;
         }
 
         return time;
