@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0136-single-number](https://github.com/Pherom/leetcode-problems/tree/master/0136-single-number) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
+| [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 | [0219-contains-duplicate-ii](https://github.com/Pherom/leetcode-problems/tree/master/0219-contains-duplicate-ii) |
 | [0238-product-of-array-except-self](https://github.com/Pherom/leetcode-problems/tree/master/0238-product-of-array-except-self) |
@@ -79,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0018-4sum](https://github.com/Pherom/leetcode-problems/tree/master/0018-4sum) |
+| [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
@@ -101,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/Pherom/leetcode-problems/tree/master/0004-median-of-two-sorted-arrays) |
+| [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0190-reverse-bits](https://github.com/Pherom/leetcode-problems/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/Pherom/leetcode-problems/tree/master/0191-number-of-1-bits) |
 ## Two Pointers
@@ -130,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
 | [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
+| [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0219-contains-duplicate-ii](https://github.com/Pherom/leetcode-problems/tree/master/0219-contains-duplicate-ii) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
@@ -284,6 +288,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 | [1347-minimum-number-of-steps-to-make-two-strings-anagram](https://github.com/Pherom/leetcode-problems/tree/master/1347-minimum-number-of-steps-to-make-two-strings-anagram) |
 ## Simulation
