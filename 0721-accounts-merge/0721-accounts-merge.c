@@ -388,5 +388,10 @@ char*** accountsMerge(char*** accounts, int accountsSize, int* accountsColSize, 
     }
 
     *returnSize = groupCount;
+
+    free(repToIdx);
+    free(parent);
+    free(emailIdToAccNum);
+    hashMapDestroy(&emailToId);
     return result;
 }
