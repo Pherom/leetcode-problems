@@ -43,7 +43,7 @@ static void backtrack(char*** res, int* resCapacity, int* resSize, char* curr, s
             strcpy(curr + *currSize, wordDict[i]);
             *currSize += j;
             curr[*currSize] = ' ';
-            *currSize += 1;
+            ++*currSize;
             backtrack(res, resCapacity, resSize, curr, currSize, s + j, wordDict, wordDictSize);
             *currSize -= j + 1;
         }
