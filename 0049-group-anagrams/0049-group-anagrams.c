@@ -5,7 +5,7 @@
  */
 #define STRS_MAX_LENGTH 10000
 #define ALPHABET_SIZE 26
-#define RES_INIT_CAPACITY 5
+#define RES_INIT_CAPACITY 20
 
 static void initCounters(int counters[][ALPHABET_SIZE], char** strs, int strsSize) {
     for (int i = 0; i < strsSize; ++i) {
