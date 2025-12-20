@@ -11,24 +11,20 @@ struct TreeNode* deleteNode(struct TreeNode* root, int key) {
         return NULL;
     }
 
-    if (root->val < key) {
+    if (root->val != key) {
+        root->left = deleteNode(root->left, key);
         root->right = deleteNode(root->right, key);
         return root;
     }
 
-    if (root->val > key) {
-        root->left = deleteNode(root->left, key);
-        return root;
+    if (root->right == NULL) {
+        struct TreeNode* left = root->left;
+        free(root);
+        return left;
     }
 
     struct TreeNode* prev = root;
     struct TreeNode* curr = root->right;
-
-    if (curr == NULL) {
-        struct TreeNode* temp = root->left;
-        free(root);
-        return temp;
-    }
 
     while (curr->left != NULL) {
         prev = curr;
@@ -37,10 +33,10 @@ struct TreeNode* deleteNode(struct TreeNode* root, int key) {
 
     root->val = curr->val;
 
-    if (prev->left == curr) {
-        prev->left = curr->right;
-    } else {
+    if (prev->right == curr) {
         prev->right = curr->right;
+    } else {
+        prev->left = curr->right;
     }
 
     free(curr);
