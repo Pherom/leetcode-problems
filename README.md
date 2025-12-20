@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0027-remove-element](https://github.com/Pherom/leetcode-problems/tree/master/0027-remove-element) |
 | [0033-search-in-rotated-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0033-search-in-rotated-sorted-array) |
 | [0048-rotate-image](https://github.com/Pherom/leetcode-problems/tree/master/0048-rotate-image) |
+| [0049-group-anagrams](https://github.com/Pherom/leetcode-problems/tree/master/0049-group-anagrams) |
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
@@ -85,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0018-4sum](https://github.com/Pherom/leetcode-problems/tree/master/0018-4sum) |
+| [0049-group-anagrams](https://github.com/Pherom/leetcode-problems/tree/master/0049-group-anagrams) |
 | [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
@@ -135,6 +137,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Pherom/leetcode-problems/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0049-group-anagrams](https://github.com/Pherom/leetcode-problems/tree/master/0049-group-anagrams) |
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0127-word-ladder](https://github.com/Pherom/leetcode-problems/tree/master/0127-word-ladder) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
@@ -152,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Pherom/leetcode-problems/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0014-longest-common-prefix](https://github.com/Pherom/leetcode-problems/tree/master/0014-longest-common-prefix) |
+| [0049-group-anagrams](https://github.com/Pherom/leetcode-problems/tree/master/0049-group-anagrams) |
 | [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0072-edit-distance](https://github.com/Pherom/leetcode-problems/tree/master/0072-edit-distance) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
