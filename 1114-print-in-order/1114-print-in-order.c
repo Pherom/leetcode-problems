@@ -59,5 +59,7 @@ void third(Foo* obj) {
 
 void fooFree(Foo* obj) {
     // User defined data may be cleaned up here.
-    
+    pthread_mutex_destroy(&(obj->mut));
+    pthread_cond_destroy(&(obj->cond));
+    free(obj);
 }
