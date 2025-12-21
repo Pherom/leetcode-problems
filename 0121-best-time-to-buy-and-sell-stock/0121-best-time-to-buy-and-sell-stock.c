@@ -3,8 +3,10 @@ int maxProfit(int* prices, int pricesSize) {
     int profit = 0;
 
     for (int i = 1; i < pricesSize; ++i) {
-        if (prices[i] - buy > profit) {
-            profit = prices[i] - buy;
+        int potentialProfit = prices[i] - buy;
+
+        if (potentialProfit > profit) {
+            profit = potentialProfit;
         } else if (prices[i] < buy) {
             buy = prices[i];
         }
