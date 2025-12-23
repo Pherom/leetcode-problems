@@ -14,9 +14,6 @@ public:
 
     void first(function<void()> printFirst) {
         std::unique_lock lock{mut};
-        cond.wait(lock, [this](){
-            return counter == 1;
-        });
         // printFirst() outputs "first". Do not change or remove this line.
         printFirst();
         ++counter;
@@ -43,7 +40,6 @@ public:
         });
         // printThird() outputs "third". Do not change or remove this line.
         printThird();
-        counter = 1;
         lock.unlock();
         cond.notify_all();
     }
