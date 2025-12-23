@@ -41,6 +41,5 @@ public:
         // printThird() outputs "third". Do not change or remove this line.
         printThird();
         lock.unlock();
-        cond.notify_all();
     }
 };
