@@ -11,11 +11,8 @@ public:
         unsigned char carry = 0;
 
         while (aI > 0 && bI > 0) {
-            --aI;
-            --bI;
-
-            unsigned char aBit = a[aI] - '0';
-            unsigned char bBit = b[bI] - '0';
+            unsigned char aBit = a[--aI] - '0';
+            unsigned char bBit = b[--bI] - '0';
 
             unsigned char resBit = aBit ^ bBit ^ carry;
             carry = (aBit & bBit) | (aBit & carry) | (bBit & carry);
