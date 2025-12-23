@@ -2,23 +2,22 @@
 #define MAX(first, second) ( ( first ) > ( second ) ? ( first ) : ( second ) )
 
 int lengthOfLongestSubstring(char* s) {
-    int lastSeen[TOTAL_CHARS];
+    char* lastSeen[TOTAL_CHARS];
     int result  = 0;
 
-    for (int c = 0; c < TOTAL_CHARS; ++c) {
-        lastSeen[c] = -1;
-    }
+    memset(lastSeen, 0, sizeof(char*) * TOTAL_CHARS);
 
     char* start = s;
     char* p = s;
     for (; *p != '\0'; ++p) {
         unsigned char lsIdx = *p;
-        if (lastSeen[lsIdx] != -1 && s + lastSeen[lsIdx] >= start) {
+
+        if (lastSeen[lsIdx] != NULL && lastSeen[lsIdx] - start >= 0) {
             result = MAX(result, p - start);
-            start = s + lastSeen[lsIdx] + 1;
+            start = lastSeen[lsIdx] + 1;
         }
 
-        lastSeen[lsIdx] = p - s;
+        lastSeen[lsIdx] = p;
     }
 
     result = MAX(result, p - start);
