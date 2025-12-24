@@ -72,21 +72,21 @@ static const int dirs[4][2] = { { 0, 1 }, { 0, -1 }, { -1, 0 }, { 1, 0 } };
 int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
     int** effort = (int**)malloc(sizeof(int*) * heightsSize);
 
-    if (effort == NULL) {
-        return -1;
-    }    
+    // if (effort == NULL) {
+    //     return -1;
+    // }    
 
     for (int i = 0; i < heightsSize; ++i) {
         effort[i] = (int*)malloc(sizeof(int) * *heightsColSize);
 
-        if (effort[i] == NULL) {
-            for (int j = 0; j < i; ++j) {
-                free(effort[j]);
-            }
+        // if (effort[i] == NULL) {
+        //     for (int j = 0; j < i; ++j) {
+        //         free(effort[j]);
+        //     }
 
-            free(effort);
-            return -1;
-        }
+        //     free(effort);
+        //     return -1;
+        // }
 
         for (int j = 0; j < *heightsColSize; ++j) {
             effort[i][j] = INT32_MAX;
