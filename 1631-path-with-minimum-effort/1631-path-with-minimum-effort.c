@@ -91,41 +91,26 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
     int m = heightsSize;
     int n = *heightsColSize;
 
-    int** effort = (int**)malloc(sizeof(int*) * m);
+    int* effort = (int*)malloc(sizeof(int) * m * n);
 
     // if (effort == NULL) {
     //     return -1;
     // }    
 
     for (int i = 0; i < m; ++i) {
-        effort[i] = (int*)malloc(sizeof(int) * n);
-
-        // if (effort[i] == NULL) {
-        //     for (int j = 0; j < i; ++j) {
-        //         free(effort[j]);
-        //     }
-
-        //     free(effort);
-        //     return -1;
-        // }
-
-        for (int j = 0; j < *heightsColSize; ++j) {
-            effort[i][j] = INT32_MAX;
+        for (int j = 0; j < n; ++j) {
+            effort[i * n + j] = INT32_MAX;
         }
     }
 
     CoordsEffort* minHeap = (CoordsEffort*)malloc(sizeof(CoordsEffort) * m * n);
 
     // if (minHeap == NULL) {
-    //     for (int i = 0; i < m; ++i) {
-    //         free(effort[i]);
-    //     }
-
     //     free(effort);
     // }
 
     int minHeapSize = 0;
-    effort[0][0] = 0;
+    effort[0] = 0;
     CoordsEffort ce = {0, 0, 0};
     HEAP_PUSH(minHeap, minHeapSize, ce);
 
@@ -137,7 +122,7 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
         int e = HEAP_TOP(minHeap).effort;
         HEAP_POP(minHeap, minHeapSize);
 
-        if (e > effort[i][j]) {
+        if (e > effort[i * n + j]) {
             continue;
         }
 
@@ -160,8 +145,8 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             }
             int potentialEffort = MAX(diff, e);
 
-            if (potentialEffort < effort[ni][nj]) {
-                effort[ni][nj] = potentialEffort;
+            if (potentialEffort < effort[ni * n + nj]) {
+                effort[ni * n + nj] = potentialEffort;
                 CoordsEffort ce = {ni, nj, potentialEffort};
                 HEAP_PUSH(minHeap, minHeapSize, ce);
             }
@@ -169,11 +154,6 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
     }
 
     free(minHeap);
-
-    for (int i = 0; i < m; ++i) {
-        free(effort[i]);
-    }
-
     free(effort);
 
     return result;
