@@ -14,5 +14,7 @@ int change(int amount, int* coins, int coinsSize) {
         }
     }
 
-    return dp[amount];
+    int result = dp[amount];
+    free(dp);
+    return result;
 }
