@@ -93,13 +93,13 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
 
     CoordsEffort* minHeap = (CoordsEffort*)malloc(sizeof(CoordsEffort) * heightsSize * *heightsColSize);
 
-    if (minHeap == NULL) {
-        for (int i = 0; i < heightsSize; ++i) {
-            free(effort[i]);
-        }
+    // if (minHeap == NULL) {
+    //     for (int i = 0; i < heightsSize; ++i) {
+    //         free(effort[i]);
+    //     }
 
-        free(effort);
-    }
+    //     free(effort);
+    // }
 
     int minHeapSize = 0;
     effort[0][0] = 0;
