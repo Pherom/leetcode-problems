@@ -65,7 +65,8 @@ void heapify(CoordsEffort* heap, int size) {
     }
 }
 
-static const int dirs[4][2] = { { 0, 1 }, { 0, -1 }, { -1, 0 }, { 1, 0 } };
+static const int di[4] = { 0,  0, -1, 1 };
+static const int dj[4] = { 1, -1,  0, 0 };
 
 int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
     int** effort = (int**)malloc(sizeof(int*) * heightsSize);
@@ -117,8 +118,8 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
         }
 
         for (int k = 0; k < 4; ++k) {
-            int ni = i + dirs[k][0];
-            int nj = j + dirs[k][1];
+            int ni = i + di[k];
+            int nj = j + dj[k];
 
             if (ni < 0 || ni >= heightsSize || nj < 0 || nj >= *heightsColSize) {
                 continue;
