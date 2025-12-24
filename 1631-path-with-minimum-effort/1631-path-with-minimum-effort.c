@@ -88,14 +88,17 @@ static const int di[4] = { 0,  0, -1, 1 };
 static const int dj[4] = { 1, -1,  0, 0 };
 
 int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
-    int** effort = (int**)malloc(sizeof(int*) * heightsSize);
+    int m = heightsSize;
+    int n = *heightsColSize;
+
+    int** effort = (int**)malloc(sizeof(int*) * m);
 
     // if (effort == NULL) {
     //     return -1;
     // }    
 
-    for (int i = 0; i < heightsSize; ++i) {
-        effort[i] = (int*)malloc(sizeof(int) * *heightsColSize);
+    for (int i = 0; i < m; ++i) {
+        effort[i] = (int*)malloc(sizeof(int) * n);
 
         // if (effort[i] == NULL) {
         //     for (int j = 0; j < i; ++j) {
@@ -111,10 +114,10 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
         }
     }
 
-    CoordsEffort* minHeap = (CoordsEffort*)malloc(sizeof(CoordsEffort) * heightsSize * *heightsColSize);
+    CoordsEffort* minHeap = (CoordsEffort*)malloc(sizeof(CoordsEffort) * m * n);
 
     // if (minHeap == NULL) {
-    //     for (int i = 0; i < heightsSize; ++i) {
+    //     for (int i = 0; i < m; ++i) {
     //         free(effort[i]);
     //     }
 
@@ -138,7 +141,7 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             continue;
         }
 
-        if (i == heightsSize - 1 && j == *heightsColSize - 1) {
+        if (i == m - 1 && j == n - 1) {
             result = e;
             break;
         }
@@ -147,7 +150,7 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             int ni = i + di[k];
             int nj = j + dj[k];
 
-            if (ni < 0 || ni >= heightsSize || nj < 0 || nj >= *heightsColSize) {
+            if (ni < 0 || ni >= m || nj < 0 || nj >= n) {
                 continue;
             }
 
@@ -167,7 +170,7 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
 
     free(minHeap);
 
-    for (int i = 0; i < heightsSize; ++i) {
+    for (int i = 0; i < m; ++i) {
         free(effort[i]);
     }
 
