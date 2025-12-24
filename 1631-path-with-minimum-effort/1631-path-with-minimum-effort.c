@@ -23,8 +23,6 @@
 
 #define MAX(first, second) ( ( first ) > ( second ) ? ( first ) : ( second ) )
 
-#define ABS(n) ( ( n ) < 0 ? -1 * ( n ) : ( n ) )
-
 typedef struct CoordsEffort {
     int i;
     int j;
@@ -127,7 +125,10 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             }
 
             int diff = heights[ni][nj] - heights[i][j];
-            int potentialEffort = MAX(ABS(diff), e);
+            if (diff < 0) {
+                diff = -1 * diff;
+            }
+            int potentialEffort = MAX(diff, e);
 
             if (potentialEffort < effort[ni][nj]) {
                 effort[ni][nj] = potentialEffort;
