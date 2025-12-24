@@ -139,5 +139,16 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
         }
     }
 
-    return effort[heightsSize - 1][*heightsColSize - 1];
+    
+    int result = effort[heightsSize - 1][*heightsColSize - 1];
+
+    free(minHeap);
+
+    for (int i = 0; i < heightsSize; ++i) {
+        free(effort[i]);
+    }
+
+    free(effort);
+
+    return result;
 }
