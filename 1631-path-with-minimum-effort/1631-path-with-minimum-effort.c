@@ -38,24 +38,43 @@ void bubbleUp(CoordsEffort* heap, int size) {
     }
 }
 
+// void bubbleDown(CoordsEffort* heap, int from, int size) {
+//     int left = LEFT(from);
+//     int right = RIGHT(from);
+
+//     if (left >= size) {
+//         return;
+//     }
+
+//     if (right >= size && heap[left].effort < heap[from].effort) {
+//         SWAP(heap + left, heap + from, CoordsEffort);
+//         return;
+//     }
+
+//     int minNode = heap[left].effort < heap[right].effort ? (heap[left].effort < heap[from].effort ? left : from) : (heap[right].effort < heap[from].effort ? right : from);
+
+//     if (minNode != from) {
+//         SWAP(heap + minNode, heap + from, CoordsEffort);
+//         bubbleDown(heap, minNode, size);
+//     }
+// }
+
 void bubbleDown(CoordsEffort* heap, int from, int size) {
-    int left = LEFT(from);
-    int right = RIGHT(from);
+    while (LEFT(from) < size) {
+        int left = LEFT(from);
+        int right = RIGHT(from);
+        int minNode = left;
 
-    if (left >= size) {
-        return;
-    }
+        if (right < size && heap[right].effort < heap[left].effort) {
+            minNode = right;
+        }
 
-    if (right >= size && heap[left].effort < heap[from].effort) {
-        SWAP(heap + left, heap + from, CoordsEffort);
-        return;
-    }
+        if (heap[from].effort < heap[minNode].effort) {
+            break;
+        }
 
-    int minNode = heap[left].effort < heap[right].effort ? (heap[left].effort < heap[from].effort ? left : from) : (heap[right].effort < heap[from].effort ? right : from);
-
-    if (minNode != from) {
         SWAP(heap + minNode, heap + from, CoordsEffort);
-        bubbleDown(heap, minNode, size);
+        from = minNode;
     }
 }
 
