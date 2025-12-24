@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0033-search-in-rotated-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0033-search-in-rotated-sorted-array) |
 | [0048-rotate-image](https://github.com/Pherom/leetcode-problems/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/Pherom/leetcode-problems/tree/master/0049-group-anagrams) |
+| [0055-jump-game](https://github.com/Pherom/leetcode-problems/tree/master/0055-jump-game) |
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Pherom/leetcode-problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -86,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/Pherom/leetcode-problems/tree/master/0055-jump-game) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 ## Sorting
@@ -179,6 +181,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/Pherom/leetcode-problems/tree/master/0055-jump-game) |
 | [0072-edit-distance](https://github.com/Pherom/leetcode-problems/tree/master/0072-edit-distance) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Pherom/leetcode-problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0140-word-break-ii](https://github.com/Pherom/leetcode-problems/tree/master/0140-word-break-ii) |
