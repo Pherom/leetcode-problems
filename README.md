@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
 | [1146-snapshot-array](https://github.com/Pherom/leetcode-problems/tree/master/1146-snapshot-array) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -51,6 +52,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/Pherom/leetcode-problems/tree/master/0733-flood-fill) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1325-delete-leaves-with-a-given-value](https://github.com/Pherom/leetcode-problems/tree/master/1325-delete-leaves-with-a-given-value) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -61,12 +63,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/Pherom/leetcode-problems/tree/master/0733-flood-fill) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Union Find
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
 | [0695-max-area-of-island](https://github.com/Pherom/leetcode-problems/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Matrix
 |  |
 | ------- |
@@ -78,6 +82,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/Pherom/leetcode-problems/tree/master/0733-flood-fill) |
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Greedy
 |  |
 | ------- |
@@ -100,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Binary Search
 |  |
 | ------- |
@@ -107,6 +113,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0033-search-in-rotated-sorted-array](https://github.com/Pherom/leetcode-problems/tree/master/0033-search-in-rotated-sorted-array) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [1146-snapshot-array](https://github.com/Pherom/leetcode-problems/tree/master/1146-snapshot-array) |
+| [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Divide and Conquer
 |  |
 | ------- |
