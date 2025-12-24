@@ -32,7 +32,7 @@ typedef struct CoordsEffort {
 void bubbleUp(CoordsEffort* heap, int size) {
     int curr = size - 1;
 
-    while (PARENT(curr) > 0 && heap[PARENT(curr)].effort > heap[curr].effort) {
+    while (PARENT(curr) >= 0 && heap[PARENT(curr)].effort > heap[curr].effort) {
         SWAP(heap + PARENT(curr), heap + curr, CoordsEffort);
         curr = PARENT(curr);
     }
@@ -107,6 +107,8 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
     CoordsEffort ce = {0, 0, 0};
     HEAP_PUSH(minHeap, minHeapSize, ce);
 
+    int result = -1;
+
     while (minHeapSize > 0) {
         int i = HEAP_TOP(minHeap).i;
         int j = HEAP_TOP(minHeap).j;
@@ -115,6 +117,11 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
 
         if (e > effort[i][j]) {
             continue;
+        }
+
+        if (i == heightsSize - 1 && j == *heightsColSize - 1) {
+            result = e;
+            break;
         }
 
         for (int k = 0; k < 4; ++k) {
@@ -138,9 +145,6 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             }
         }
     }
-
-    
-    int result = effort[heightsSize - 1][*heightsColSize - 1];
 
     free(minHeap);
 
