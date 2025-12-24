@@ -32,7 +32,7 @@ typedef struct CoordsEffort {
 void bubbleUp(CoordsEffort* heap, int size) {
     int curr = size - 1;
 
-    while (PARENT(curr) >= 0 && heap[PARENT(curr)].effort > heap[curr].effort) {
+    while (curr > 0 && heap[PARENT(curr)].effort > heap[curr].effort) {
         SWAP(heap + PARENT(curr), heap + curr, CoordsEffort);
         curr = PARENT(curr);
     }
