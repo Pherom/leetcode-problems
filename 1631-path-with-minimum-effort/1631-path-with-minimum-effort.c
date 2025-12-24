@@ -139,11 +139,14 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
                 continue;
             }
 
+            int potentialEffort = e;
             int diff = heights[ni][nj] - heights[i][j];
             if (diff < 0) {
                 diff = -1 * diff;
             }
-            int potentialEffort = MAX(diff, e);
+            if (diff > e) {
+                potentialEffort = diff;
+            }
 
             if (potentialEffort < effort[ni * n + nj]) {
                 effort[ni * n + nj] = potentialEffort;
