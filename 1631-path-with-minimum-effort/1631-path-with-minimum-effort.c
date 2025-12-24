@@ -69,7 +69,7 @@ void bubbleDown(CoordsEffort* heap, int from, int size) {
             minNode = right;
         }
 
-        if (heap[from].effort < heap[minNode].effort) {
+        if (heap[from].effort <= heap[minNode].effort) {
             break;
         }
 
