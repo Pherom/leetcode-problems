@@ -87,9 +87,7 @@ int minimumEffortPath(int** heights, int heightsSize, int* heightsColSize) {
             free(effort);
             return -1;
         }
-    }
 
-    for (int i = 0; i < heightsSize; ++i) {
         for (int j = 0; j < *heightsColSize; ++j) {
             effort[i][j] = INT32_MAX;
         }
