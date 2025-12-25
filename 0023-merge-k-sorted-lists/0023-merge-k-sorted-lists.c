@@ -8,15 +8,11 @@
 typedef struct ListNode ListNode;
 
 ListNode* merge2Lists(ListNode* first, ListNode* second) {
-    ListNode* dummy = (ListNode*)malloc(sizeof(ListNode));
-
-    if (dummy == NULL) {
-        return NULL;
-    }
+    ListNode dummy;
 
     ListNode* currF = first;
     ListNode* currS = second;
-    ListNode* currR = dummy;
+    ListNode* currR = &dummy;
 
     while (currF != NULL && currS != NULL) {
         ListNode* nextF = currF->next;
@@ -47,8 +43,7 @@ ListNode* merge2Lists(ListNode* first, ListNode* second) {
 
     currR->next = NULL;
 
-    ListNode* res = dummy->next;
-    free(dummy);
+    ListNode* res = dummy.next;
     return res;
 }
 
