@@ -12,13 +12,15 @@ public class SnapshotArray {
     }
     
     public void Set(int index, int val) {
-        if (snapsByIndex[index].Count == 0) {
-            snapsByIndex[index].Add((snapsTaken, val));
+        List<(int Snap, int Val)> snaps = snapsByIndex[index];
+
+        if (snaps.Count == 0) {
+            snaps.Add((snapsTaken, val));
         } else {
-            if (snapsByIndex[index].Last().Snap == snapsTaken) {
-                snapsByIndex[index][^1] = (snapsTaken, val);
+            if (snaps.Last().Snap == snapsTaken) {
+                snaps[^1] = (snapsTaken, val);
             } else {
-                snapsByIndex[index].Add((snapsTaken, val));
+                snaps.Add((snapsTaken, val));
             }
         }
     }
