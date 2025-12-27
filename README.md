@@ -24,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0219-contains-duplicate-ii](https://github.com/Pherom/leetcode-problems/tree/master/0219-contains-duplicate-ii) |
 | [0238-product-of-array-except-self](https://github.com/Pherom/leetcode-problems/tree/master/0238-product-of-array-except-self) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
+| [0304-range-sum-query-2d-immutable](https://github.com/Pherom/leetcode-problems/tree/master/0304-range-sum-query-2d-immutable) |
 | [0502-ipo](https://github.com/Pherom/leetcode-problems/tree/master/0502-ipo) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
@@ -79,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/Pherom/leetcode-problems/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/Pherom/leetcode-problems/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Pherom/leetcode-problems/tree/master/0130-surrounded-regions) |
+| [0304-range-sum-query-2d-immutable](https://github.com/Pherom/leetcode-problems/tree/master/0304-range-sum-query-2d-immutable) |
 | [0695-max-area-of-island](https://github.com/Pherom/leetcode-problems/tree/master/0695-max-area-of-island) |
 | [0733-flood-fill](https://github.com/Pherom/leetcode-problems/tree/master/0733-flood-fill) |
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
@@ -240,6 +242,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0146-lru-cache](https://github.com/Pherom/leetcode-problems/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Pherom/leetcode-problems/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/Pherom/leetcode-problems/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0304-range-sum-query-2d-immutable](https://github.com/Pherom/leetcode-problems/tree/master/0304-range-sum-query-2d-immutable) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
 | [0706-design-hashmap](https://github.com/Pherom/leetcode-problems/tree/master/0706-design-hashmap) |
 | [1146-snapshot-array](https://github.com/Pherom/leetcode-problems/tree/master/1146-snapshot-array) |
@@ -294,6 +297,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/Pherom/leetcode-problems/tree/master/0238-product-of-array-except-self) |
+| [0304-range-sum-query-2d-immutable](https://github.com/Pherom/leetcode-problems/tree/master/0304-range-sum-query-2d-immutable) |
 ## Sliding Window
 |  |
 | ------- |
