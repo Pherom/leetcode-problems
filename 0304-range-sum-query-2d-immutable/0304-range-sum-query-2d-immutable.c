@@ -37,16 +37,8 @@ NumMatrix* numMatrixCreate(int** matrix, int matrixSize, int* matrixColSize) {
 
     sumMat[n + 1] = matrix[0][0];
 
-    for (int j = 2; j < n; ++j) {
-        sumMat[n + j] = sumMat[n + j - 1] + matrix[0][j - 1];
-    }
-
-    for (int i = 2; i < m; ++i) {
-        sumMat[i * n + 1] = sumMat[(i - 1) * n + 1] + matrix[i - 1][0];
-    }
-
-    for (int i = 2; i < m; ++i) {
-        for (int j = 2; j < n; ++j) {
+    for (int i = 1; i < m; ++i) {
+        for (int j = 1; j < n; ++j) {
             sumMat[i * n + j] = sumMat[(i - 1) * n + j] + sumMat[i * n + j - 1] - sumMat[(i - 1) * n + j - 1] + matrix[i - 1][j - 1];
         }
     }
