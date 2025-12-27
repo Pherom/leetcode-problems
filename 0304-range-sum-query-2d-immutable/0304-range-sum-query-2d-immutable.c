@@ -51,14 +51,6 @@ NumMatrix* numMatrixCreate(int** matrix, int matrixSize, int* matrixColSize) {
         }
     }
 
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            printf("%d, ", sumMat[i * n + j]);
-        }
-
-        puts("");
-    }
-
     result->sumMat = sumMat;
     result->m = m;
     result->n = n;
