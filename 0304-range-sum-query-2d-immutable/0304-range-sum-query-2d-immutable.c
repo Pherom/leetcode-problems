@@ -84,6 +84,7 @@ void numMatrixFree(NumMatrix* obj) {
     }
 
     free(obj->sumMat);
+    free(obj);
 }
 
 /**
