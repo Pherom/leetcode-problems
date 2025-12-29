@@ -1,7 +1,7 @@
 int getSum(int a, int b) {
+    unsigned int mask = 1;
     unsigned int carry = 0;
     int res = 0;
-    unsigned int mask = 1;
 
     while (mask > 0) {
         int aBit = a & mask;
