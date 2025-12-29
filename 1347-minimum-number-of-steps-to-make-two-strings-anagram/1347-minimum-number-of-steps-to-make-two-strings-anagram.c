@@ -1,18 +1,21 @@
 int minSteps(char* s, char* t) {
-    int counters[26] = {0};
+    int counts[26] = {0};
 
-    for (char* p = t; *p != '\0'; ++p) {
-        ++counters[*p - 'a'];
+    char* ps = s;
+    for (char* pt = t; *pt != '\0'; ++pt) {
+        --counts[*pt - 'a'];
+        ++counts[*ps - 'a'];
+        ++ps;
     }
 
-    int count = 0;
-    for (char* p = s; *p != '\0'; ++p) {
-        if (counters[*p - 'a'] == 0) {
-            ++count;
-        } else {
-            --counters[*p - 'a'];
+    int steps = 0;
+    for (int i = 0; i < 26; ++i) {
+        int count = counts[i];
+
+        if (count > 0) {
+            steps += count;
         }
     }
 
-    return count;
+    return steps;
 }
