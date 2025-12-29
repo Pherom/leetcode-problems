@@ -147,6 +147,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0168-excel-sheet-column-title](https://github.com/Pherom/leetcode-problems/tree/master/0168-excel-sheet-column-title) |
 | [0189-rotate-array](https://github.com/Pherom/leetcode-problems/tree/master/0189-rotate-array) |
 | [0223-rectangle-area](https://github.com/Pherom/leetcode-problems/tree/master/0223-rectangle-area) |
+| [0371-sum-of-two-integers](https://github.com/Pherom/leetcode-problems/tree/master/0371-sum-of-two-integers) |
 ## Hash Table
 |  |
 | ------- |
@@ -256,6 +257,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0201-bitwise-and-of-numbers-range](https://github.com/Pherom/leetcode-problems/tree/master/0201-bitwise-and-of-numbers-range) |
 | [0287-find-the-duplicate-number](https://github.com/Pherom/leetcode-problems/tree/master/0287-find-the-duplicate-number) |
 | [0338-counting-bits](https://github.com/Pherom/leetcode-problems/tree/master/0338-counting-bits) |
+| [0371-sum-of-two-integers](https://github.com/Pherom/leetcode-problems/tree/master/0371-sum-of-two-integers) |
 ## Binary Search Tree
 |  |
 | ------- |
