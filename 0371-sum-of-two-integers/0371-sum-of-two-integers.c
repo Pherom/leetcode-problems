@@ -8,9 +8,8 @@ int getSum(int a, int b) {
     while (mask > 0) {
         unsigned int aBit = ua & mask;
         unsigned int bBit = ub & mask;
-        unsigned int resBit = aBit ^ bBit ^ carry;
+        res |= aBit ^ bBit ^ carry;
         carry = ((aBit & bBit) | (aBit & carry) | (bBit & carry)) << 1;
-        res |= resBit;
         mask <<= 1;
     }
 
