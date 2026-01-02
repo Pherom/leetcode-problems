@@ -11,9 +11,9 @@ public class LRUCache {
     }
     
     public int Get(int key) {
-        if (dict.ContainsKey(key)) {
-            LinkedListNode<(int Key, int Value)> node = dict[key];
+        LinkedListNode<(int Key, int Value)> node;
 
+        if (dict.TryGetValue(key, out node)) {
             list.Remove(node);
             list.AddFirst(node);
             return node.ValueRef.Value;
