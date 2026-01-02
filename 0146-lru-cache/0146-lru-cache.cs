@@ -36,7 +36,7 @@ public class LRUCache {
             LinkedListNode<(int Key, int Value)> last = list.Last;
 
             dict.Remove(last.ValueRef.Key);
-            list.Remove(last);
+            list.RemoveLast();
         }
 
         list.AddFirst((key, value));
