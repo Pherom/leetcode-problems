@@ -57,29 +57,8 @@ void minHeapPop(Passengers* minHeap, int* size) {
     bubbleDown(minHeap, *size);
 }
 
-static int partitionTripsByFrom(int** trips, int size) {
-    int pivotVal = trips[size - 1][1];
-    int lessCount = 0;
-
-    for (int i = 0; i < size - 1; ++i) {
-        if (trips[i][1] < pivotVal) {
-            SWAP(trips + lessCount, trips + i, int*);
-            ++lessCount;
-        }
-    }
-
-    SWAP(trips + lessCount, trips + size - 1, int*);
-    return lessCount;
-}
-
-static void sortTripsByFrom(int** trips, int size) {
-    if (size <= 1) {
-        return;
-    }
-
-    int pivot = partitionTripsByFrom(trips, size);
-    sortTripsByFrom(trips, pivot);
-    sortTripsByFrom(trips + pivot + 1, size - pivot - 1);
+static int compareTripsByFrom(void const* first, void const* second) {
+    return (*((int**)first))[1] - (*((int**)second))[1];
 }
 
 bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {
@@ -92,7 +71,7 @@ bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {
     int minHeapSize = 0;
     int seatsTaken = 0;
 
-    sortTripsByFrom(trips, tripsSize);
+    qsort(trips, tripsSize, sizeof(int*), compareTripsByFrom);
     
     for (int i = 0; i < tripsSize; ++i) {
         int distTraveled = trips[i][1];
