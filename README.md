@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
+| [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
 | [1146-snapshot-array](https://github.com/Pherom/leetcode-problems/tree/master/1146-snapshot-array) |
 | [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Depth-First Search
@@ -102,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/Pherom/leetcode-problems/tree/master/0721-accounts-merge) |
 | [0853-car-fleet](https://github.com/Pherom/leetcode-problems/tree/master/0853-car-fleet) |
+| [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -110,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/Pherom/leetcode-problems/tree/master/0621-task-scheduler) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/Pherom/leetcode-problems/tree/master/0703-kth-largest-element-in-a-stream) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
+| [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
 | [1631-path-with-minimum-effort](https://github.com/Pherom/leetcode-problems/tree/master/1631-path-with-minimum-effort) |
 ## Binary Search
 |  |
@@ -300,6 +303,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/Pherom/leetcode-problems/tree/master/0238-product-of-array-except-self) |
 | [0304-range-sum-query-2d-immutable](https://github.com/Pherom/leetcode-problems/tree/master/0304-range-sum-query-2d-immutable) |
+| [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
 ## Sliding Window
 |  |
 | ------- |
@@ -329,6 +333,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0067-add-binary](https://github.com/Pherom/leetcode-problems/tree/master/0067-add-binary) |
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
+| [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
 ## Concurrency
 |  |
 | ------- |
