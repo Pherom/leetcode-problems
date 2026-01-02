@@ -13,13 +13,13 @@ public class LRUCache {
     public int Get(int key) {
         LinkedListNode<(int Key, int Value)> node;
 
-        if (dict.TryGetValue(key, out node)) {
-            list.Remove(node);
-            list.AddFirst(node);
-            return node.ValueRef.Value;
+        if (!dict.TryGetValue(key, out node)) {
+            return -1;
         }
 
-        return -1;
+        list.Remove(node);
+        list.AddFirst(node);
+        return node.ValueRef.Value;
     }
     
     public void Put(int key, int value) {
