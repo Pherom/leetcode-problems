@@ -17,7 +17,7 @@ TreeNode* removeLeafNodes(TreeNode* root, int target) {
     root->right = removeLeafNodes(root->right, target);
 
     if (root->val == target && root->left == NULL && root->right == NULL) {
-        free(root);
+        // free(root);
         return NULL;
     }
 
