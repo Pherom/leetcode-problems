@@ -1,10 +1,10 @@
 public class LRUCache {
 
     private class Node {
-        public int Key { get; set; }
-        public int Value { get; set; }
-        public Node Prev { get; set; }
-        public Node Next { get; set; }
+        public int Key;
+        public int Value;
+        public Node Prev;
+        public Node Next;
 
         public Node(int key, int value) {
             Key = key;
