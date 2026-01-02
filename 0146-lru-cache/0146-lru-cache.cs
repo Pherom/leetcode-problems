@@ -21,7 +21,7 @@ public class LRUCache {
     private int capacity;
 
     public LRUCache(int capacity) {
-        dict = new Dictionary<int, Node>();
+        dict = new Dictionary<int, Node>(capacity);
         head = new Node(-1, -1);
         tail = new Node(-1, -1);
         head.Prev = null;
