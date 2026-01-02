@@ -65,9 +65,11 @@ public class LRUCache {
             Node last = tail.Prev;
 
             dict.Remove(last.Key);
-            last.Prev.Next = tail;
-            tail.Prev = last.Prev;
-            --count;
+            last.Key = key;
+            last.Value = value;
+            MoveToFirst(last);
+            dict.Add(key, last);
+            return;
         }
 
         Node created = new Node(key, value);
