@@ -1,4 +1,4 @@
-#define MIN(first, second) ( ( first ) < ( second ) ? ( first ) : ( second ) );
+#define MIN(first, second) ( ( first ) < ( second ) ? ( first ) : ( second ) )
 
 int maxArea(int* height, int heightSize) {
     int left = 0;
