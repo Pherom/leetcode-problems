@@ -105,7 +105,7 @@ bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {
         Passengers passengers = { trips[i][0], trips[i][2] };
 
         if (passengers.count > capacity - seatsTaken) {
-            free(minHeap);
+            // free(minHeap);
             return false;
         }
         
@@ -113,6 +113,6 @@ bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {
         seatsTaken += passengers.count;
     }
 
-    free(minHeap);
+    // free(minHeap);
     return true;
 }
