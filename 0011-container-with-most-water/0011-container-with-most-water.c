@@ -17,10 +17,7 @@ int maxArea(int* height, int heightSize) {
 
         if (heightLeft > heightRight) {
             --right;
-        } else if (heightRight > heightLeft) {
-            ++left;
         } else {
-            --right;
             ++left;
         }
     }
