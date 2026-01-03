@@ -2,10 +2,22 @@ class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         unordered_map<string, vector<string>> ordToAnagrams{};
+        array<int, 26> counters{};
 
         for (string const& str : strs) {
-            string sortedStr{str};
-            std::sort(sortedStr.begin(), sortedStr.end());
+            for (char c : str) {
+                ++counters[c - 'a'];
+            }
+
+            string sortedStr{};
+            sortedStr.reserve(str.size());
+
+            for (int i = 0; i < 26; ++i) {
+                while (counters[i] > 0) {
+                    sortedStr.push_back('a' + i);
+                    --counters[i];
+                }
+            }
 
             auto it = ordToAnagrams.find(sortedStr);
 
