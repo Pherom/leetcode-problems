@@ -1,28 +1,31 @@
 class Solution {
+private:
+    struct Hash {
+        size_t operator()(const array<int, 26>& a) const {
+            size_t h = 0;
+            for (int x : a) {
+                h = (h*31) + x;
+            }
+            return h;
+        }
+    };
+
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        unordered_map<string, vector<string>> ordToAnagrams{};
+        unordered_map<array<int, 26>, vector<string>, Hash> ordToAnagrams{};
         array<int, 26> counters{};
 
         for (string const& str : strs) {
+            std::fill(counters.begin(), counters.end(), 0);
+
             for (char c : str) {
                 ++counters[c - 'a'];
             }
 
-            string sortedStr{};
-            sortedStr.reserve(str.size());
-
-            for (int i = 0; i < 26; ++i) {
-                while (counters[i] > 0) {
-                    sortedStr.push_back('a' + i);
-                    --counters[i];
-                }
-            }
-
-            auto it = ordToAnagrams.find(sortedStr);
+            auto it = ordToAnagrams.find(counters);
 
             if (it == ordToAnagrams.end()) {
-                it = ordToAnagrams.insert({sortedStr, vector<string>{}}).first;
+                it = ordToAnagrams.insert({counters, vector<string>{}}).first;
             }
 
             it->second.push_back(str);
