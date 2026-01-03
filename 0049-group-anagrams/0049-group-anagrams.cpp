@@ -22,10 +22,10 @@ public:
             auto it = ordToAnagrams.find(sortedStr);
 
             if (it == ordToAnagrams.end()) {
-                ordToAnagrams.insert({sortedStr, vector<string>{}});
+                it = ordToAnagrams.insert({sortedStr, vector<string>{}}).first;
             }
 
-            ordToAnagrams[sortedStr].push_back(str);
+            it->second.push_back(str);
         }
 
         vector<vector<string>> result{};
