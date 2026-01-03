@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0739-daily-temperatures](https://github.com/Pherom/leetcode-problems/tree/master/0739-daily-temperatures) |
 | [0853-car-fleet](https://github.com/Pherom/leetcode-problems/tree/master/0853-car-fleet) |
 | [0867-transpose-matrix](https://github.com/Pherom/leetcode-problems/tree/master/0867-transpose-matrix) |
+| [0918-maximum-sum-circular-subarray](https://github.com/Pherom/leetcode-problems/tree/master/0918-maximum-sum-circular-subarray) |
 | [0934-shortest-bridge](https://github.com/Pherom/leetcode-problems/tree/master/0934-shortest-bridge) |
 | [1046-last-stone-weight](https://github.com/Pherom/leetcode-problems/tree/master/1046-last-stone-weight) |
 | [1094-car-pooling](https://github.com/Pherom/leetcode-problems/tree/master/1094-car-pooling) |
@@ -132,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/Pherom/leetcode-problems/tree/master/0169-majority-element) |
 | [0190-reverse-bits](https://github.com/Pherom/leetcode-problems/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/Pherom/leetcode-problems/tree/master/0191-number-of-1-bits) |
+| [0918-maximum-sum-circular-subarray](https://github.com/Pherom/leetcode-problems/tree/master/0918-maximum-sum-circular-subarray) |
 ## Two Pointers
 |  |
 | ------- |
@@ -199,6 +201,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0338-counting-bits](https://github.com/Pherom/leetcode-problems/tree/master/0338-counting-bits) |
 | [0518-coin-change-ii](https://github.com/Pherom/leetcode-problems/tree/master/0518-coin-change-ii) |
 | [0647-palindromic-substrings](https://github.com/Pherom/leetcode-problems/tree/master/0647-palindromic-substrings) |
+| [0918-maximum-sum-circular-subarray](https://github.com/Pherom/leetcode-problems/tree/master/0918-maximum-sum-circular-subarray) |
 ## Backtracking
 |  |
 | ------- |
@@ -345,4 +348,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/Pherom/leetcode-problems/tree/master/0023-merge-k-sorted-lists) |
+## Queue
+|  |
+| ------- |
+| [0918-maximum-sum-circular-subarray](https://github.com/Pherom/leetcode-problems/tree/master/0918-maximum-sum-circular-subarray) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0918-maximum-sum-circular-subarray](https://github.com/Pherom/leetcode-problems/tree/master/0918-maximum-sum-circular-subarray) |
 <!---LeetCode Topics End-->
