@@ -20,7 +20,7 @@ public:
         result.reserve(strs.size());
 
         for (auto const& p : ordToAnagrams) {
-            result.push_back(std::move(p.second));
+            result.emplace_back(std::move(p.second));
         }
 
         return result;
