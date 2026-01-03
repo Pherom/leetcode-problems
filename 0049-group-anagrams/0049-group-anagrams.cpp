@@ -27,7 +27,7 @@ public:
                 it = ordToAnagrams.insert({std::move(counters), vector<string>{}}).first;
             }
 
-            it->second.emplace_back(std::move(str));
+            it->second.push_back(str);
         }
 
         vector<vector<string>> result{};
