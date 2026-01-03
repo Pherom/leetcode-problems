@@ -22,11 +22,10 @@ int maxSubarraySumCircular(int* nums, int numsSize) {
         total += num;
     }
 
-    long long altMax = total - globalMin;
-
     if (globalMin == total) {
         return globalMax;
     }
 
+    long long altMax = total - globalMin;
     return MAX(globalMax, altMax);
 }
