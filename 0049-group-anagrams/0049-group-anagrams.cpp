@@ -14,7 +14,7 @@ public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         unordered_map<array<int, 26>, vector<string>, Hash> ordToAnagrams{};
 
-        for (string const& str : strs) {
+        for (string& str : strs) {
             array<int, 26> counters{};
 
             for (char c : str) {
@@ -27,7 +27,7 @@ public:
                 it = ordToAnagrams.insert({std::move(counters), vector<string>{}}).first;
             }
 
-            it->second.push_back(str);
+            it->second.emplace_back(std::move(str));
         }
 
         vector<vector<string>> result{};
