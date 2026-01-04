@@ -2,30 +2,45 @@ using System.Threading;
 
 public class Foo {
 
-    private AutoResetEvent firstEvent;
-    private AutoResetEvent secondEvent;
+    private readonly object lck;
+    private int counter = 1;
 
     public Foo() {
-        firstEvent = new AutoResetEvent(false);
-        secondEvent = new AutoResetEvent(false);
+        lck = new object();
     }
 
     public void First(Action printFirst) {
-        // printFirst() outputs "first". Do not change or remove this line.
-        printFirst();
-        firstEvent.Set();
+        lock (lck) {
+            // printFirst() outputs "first". Do not change or remove this line.
+            printFirst();
+            ++counter;
+
+            Monitor.PulseAll(lck);
+        }
     }
 
     public void Second(Action printSecond) {
-        firstEvent.WaitOne();
-        // printSecond() outputs "second". Do not change or remove this line.
-        printSecond();
-        secondEvent.Set();
+        lock (lck) {
+            while (counter != 2) {
+                Monitor.Wait(lck);
+            }
+
+            // printSecond() outputs "second". Do not change or remove this line.
+            printSecond();
+            ++counter;
+
+            Monitor.PulseAll(lck);
+        }
     }
 
     public void Third(Action printThird) {
-        secondEvent.WaitOne();
-        // printThird() outputs "third". Do not change or remove this line.
-        printThird();
+        lock (lck) {
+            while (counter != 3) {
+                Monitor.Wait(lck);
+            }
+
+            // printThird() outputs "third". Do not change or remove this line.
+            printThird();
+        }
     }
 }
