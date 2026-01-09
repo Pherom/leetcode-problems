@@ -29,8 +29,8 @@ int* postorderTraversal(struct TreeNode* root, int* returnSize) {
         return NULL;
     }
 
-    for (int i = leftSize; i < resSize - 1; ++i) {
-        res[i] = right[i - leftSize];
+    if (right != NULL) {
+        memcpy(res + leftSize, right, sizeof(int) * rightSize);
     }
 
     res[resSize - 1] = root->val;
