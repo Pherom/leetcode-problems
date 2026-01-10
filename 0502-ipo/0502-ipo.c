@@ -30,16 +30,16 @@ int profitCapitalPairCmp(void const* first, void const* second) {
     return firstPair->capital - secondPair->capital;
 }
 
-void bubbleUp(ProfitCapitalPair* maxHeap, int size) {
+void bubbleUp(int* maxHeap, int size) {
     int curr = size - 1;
 
-    while (curr > 0 && maxHeap[curr].profit > maxHeap[PARENT(curr)].profit) {
-        SWAP(maxHeap + curr, maxHeap + PARENT(curr), ProfitCapitalPair);
+    while (curr > 0 && maxHeap[curr] > maxHeap[PARENT(curr)]) {
+        SWAP(maxHeap + curr, maxHeap + PARENT(curr), int);
         curr = PARENT(curr);
     }
 }
 
-void bubbleDown(ProfitCapitalPair* maxHeap, int size) {
+void bubbleDown(int* maxHeap, int size) {
     int curr = 0;
 
     while (curr < size) {
@@ -52,15 +52,15 @@ void bubbleDown(ProfitCapitalPair* maxHeap, int size) {
 
         int maxNode = left;
 
-        if (right < size && maxHeap[right].profit > maxHeap[maxNode].profit) {
+        if (right < size && maxHeap[right] > maxHeap[maxNode]) {
             maxNode = right;
         }
 
-        if (maxHeap[curr].profit > maxHeap[maxNode].profit) {
+        if (maxHeap[curr] > maxHeap[maxNode]) {
             break;
         }
 
-        SWAP(maxHeap + curr, maxHeap + maxNode, ProfitCapitalPair);
+        SWAP(maxHeap + curr, maxHeap + maxNode, int);
         curr = maxNode;
     }
 }
@@ -81,7 +81,7 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
 
     qsort((void*)zipped, profitsSize, sizeof(ProfitCapitalPair), profitCapitalPairCmp);
 
-    ProfitCapitalPair* maxHeap = (ProfitCapitalPair*)malloc(sizeof(ProfitCapitalPair) * profitsSize);
+    int* maxHeap = (int*)malloc(sizeof(int) * profitsSize);
 
     if (maxHeap == NULL) {
         free(zipped);
@@ -94,7 +94,7 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
 
     while (k > 0) {
         while (i < profitsSize && zipped[i].capital <= w) {
-            MAX_HEAP_PUSH(maxHeap, &heapSize, zipped[i]);
+            MAX_HEAP_PUSH(maxHeap, &heapSize, zipped[i].profit);
             ++i;
         }
 
@@ -102,9 +102,9 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
             break;
         }
 
-        ProfitCapitalPair* top = &MAX_HEAP_TOP(maxHeap);
-        res += top->profit;
-        w += top->profit;
+        int top = MAX_HEAP_TOP(maxHeap);
+        res += top;
+        w += top;
         --k;
         MAX_HEAP_POP(maxHeap, &heapSize);
     }
