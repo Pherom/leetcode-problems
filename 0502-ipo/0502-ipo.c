@@ -87,10 +87,9 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
     int heapSize = 0;
     int i = 0;
 
-    while (k > 0) {
+    while (k --> 0) {
         while (i < profitsSize && zipped[i].capital <= w) {
-            MAX_HEAP_PUSH(maxHeap, &heapSize, zipped[i].profit);
-            ++i;
+            MAX_HEAP_PUSH(maxHeap, &heapSize, zipped[i++].profit);
         }
 
         if (heapSize == 0) {
@@ -99,7 +98,6 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
 
         int top = MAX_HEAP_TOP(maxHeap);
         w += top;
-        --k;
         MAX_HEAP_POP(maxHeap, &heapSize);
     }
 
