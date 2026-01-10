@@ -33,12 +33,10 @@ int profitCapitalPairCmp(void const* first, void const* second) {
 
 void bubbleUp(int* maxHeap, int size) {
     int curr = size - 1;
-    int* currPtr = maxHeap + curr;
 
-    while (curr > 0 && *currPtr > maxHeap[PARENT(curr)]) {
-        SWAP(currPtr, maxHeap + PARENT(curr), int);
+    while (curr > 0 && maxHeap[curr] > maxHeap[PARENT(curr)]) {
+        SWAP(maxHeap + curr, maxHeap + PARENT(curr), int);
         curr = PARENT(curr);
-        currPtr = maxHeap + curr;
     }
 }
 
@@ -47,19 +45,18 @@ void bubbleDown(int* maxHeap, int size) {
 
     while (true) {
         int left = LEFT(curr);
-
-        if (left >= size) {
-            break;
-        }
-
-        int maxNode = left;
         int right = RIGHT(curr);
+        int maxNode = curr;
+
+        if (left < size && maxHeap[left] > maxHeap[maxNode]) {
+            maxNode = left;
+        }
 
         if (right < size && maxHeap[right] > maxHeap[maxNode]) {
             maxNode = right;
         }
 
-        if (maxHeap[curr] > maxHeap[maxNode]) {
+        if (maxNode == curr) {
             break;
         }
 
