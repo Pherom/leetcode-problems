@@ -8,6 +8,7 @@
             *( second ) = temp;         \
         }
 
+#define MAX_HEAP_CAP 100001
 #define MAX_HEAP_TOP(maxHeap) ( ( maxHeap )[0] )
 #define MAX_HEAP_PUSH(maxHeap, size, item) {        \
             maxHeap[(*( size ))++] = item;          \
@@ -65,6 +66,8 @@ void bubbleDown(int* maxHeap, int size) {
     }
 }
 
+int maxHeap[MAX_HEAP_CAP];
+
 int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capital, int capitalSize) {
     ProfitCapitalPair* zipped = (ProfitCapitalPair*)malloc(sizeof(ProfitCapitalPair) * profitsSize);
 
@@ -80,13 +83,6 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
     }
 
     qsort((void*)zipped, profitsSize, sizeof(ProfitCapitalPair), profitCapitalPairCmp);
-
-    int* maxHeap = (int*)malloc(sizeof(int) * profitsSize);
-
-    if (maxHeap == NULL) {
-        free(zipped);
-        return -1;
-    }
 
     int heapSize = 0;
     int i = 0;
