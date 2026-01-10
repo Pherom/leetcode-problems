@@ -45,13 +45,13 @@ void bubbleDown(int* maxHeap, int size) {
 
     while (true) {
         int left = LEFT(curr);
-        int right = RIGHT(curr);
 
         if (left >= size) {
             break;
         }
 
         int maxNode = left;
+        int right = RIGHT(curr);
 
         if (right < size && maxHeap[right] > maxHeap[maxNode]) {
             maxNode = right;
