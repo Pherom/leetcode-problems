@@ -71,9 +71,9 @@ int maxHeap[MAX_HEAP_CAP];
 int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capital, int capitalSize) {
     ProfitCapitalPair* zipped = (ProfitCapitalPair*)malloc(sizeof(ProfitCapitalPair) * profitsSize);
 
-    if (zipped == NULL) {
-        return -1;
-    }
+    // if (zipped == NULL) {
+    //     return -1;
+    // }
 
     for (int i = 0; i < profitsSize; ++i) {
         ProfitCapitalPair* curr = zipped + i;
@@ -103,6 +103,6 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
         MAX_HEAP_POP(maxHeap, &heapSize);
     }
 
-    free(zipped);
+    // free(zipped);
     return w;
 }
