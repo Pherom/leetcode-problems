@@ -105,5 +105,6 @@ int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capit
         MAX_HEAP_POP(maxHeap, &heapSize);
     }
 
+    free(zipped);
     return res;
 }
