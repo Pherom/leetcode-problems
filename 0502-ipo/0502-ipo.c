@@ -43,7 +43,7 @@ void bubbleUp(int* maxHeap, int size) {
 void bubbleDown(int* maxHeap, int size) {
     int curr = 0;
 
-    while (curr < size) {
+    while (true) {
         int left = LEFT(curr);
         int right = RIGHT(curr);
 
