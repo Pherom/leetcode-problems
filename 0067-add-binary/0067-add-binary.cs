@@ -10,7 +10,7 @@ public class Solution {
         int carry = 0;
         int bI = b.Length - 1;
         int aI = a.Length - 1;
-        int resI = 0;
+        int resI = resArr.Length - 1;
 
         while (aI >= 0 && bI >= 0) {
             int aBit = a[aI--] - '0';
@@ -19,7 +19,7 @@ public class Solution {
             int resBit = aBit ^ bBit ^ carry;
             carry = (aBit & bBit) | (aBit & carry) | (bBit & carry);
 
-            resArr[resI++] = (char)('0' + resBit);
+            resArr[resI--] = (char)('0' + resBit);
         }
 
         void handleRemaining(string x, ref int xI) {
@@ -29,14 +29,12 @@ public class Solution {
                 int resBit = xBit ^ carry;
                 carry = xBit & carry;
 
-                resArr[resI++] = (char)('0' + resBit);
+                resArr[resI--] = (char)('0' + resBit);
             }
         }
 
         handleRemaining(a, ref aI);
         handleRemaining(b, ref bI);
-
-        Array.Reverse(resArr);
 
         if (carry == 0) {
             return new string(resArr, 1, resArr.Length - 1);
