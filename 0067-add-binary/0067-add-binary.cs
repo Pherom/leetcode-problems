@@ -36,13 +36,13 @@ public class Solution {
         handleRemaining(a, ref aI);
         handleRemaining(b, ref bI);
 
-        if (carry > 0) {
-            resArr[resI] = '1';
-        } else {
-            Array.Resize(ref resArr, resArr.Length - 1);
+        Array.Reverse(resArr);
+
+        if (carry == 0) {
+            return new string(resArr, 1, resArr.Length - 1);
         }
 
-        Array.Reverse(resArr);
+        resArr[0] = '1';
         return new string(resArr);
     }
 }
