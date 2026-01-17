@@ -1,13 +1,12 @@
 public class Solution {
-    private bool lutBuilt;
-    private byte[] lut;
+    private static byte[] lut;
 
-    public Solution() {
-        lutBuilt = false;
+    static Solution() {
         lut = new byte[1 << 8];
+        buildLUT();
     }
 
-    private void buildLUT() {
+    private static void buildLUT() {
         lut[0] = 0;
 
         byte curr = 1;
@@ -27,11 +26,6 @@ public class Solution {
     }
 
     public int HammingWeight(int n) {
-        if (!lutBuilt) {
-            buildLUT();
-            lutBuilt = true;
-        }
-
         uint un = (uint)n;
         int count = 0;
 
