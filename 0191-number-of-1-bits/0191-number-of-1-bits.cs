@@ -1,5 +1,5 @@
 public class Solution {
-    private static byte[] lut;
+    private static readonly byte[] lut;
 
     static Solution() {
         lut = new byte[1 << 8];
