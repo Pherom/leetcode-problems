@@ -22,19 +22,19 @@ public class Solution {
             resArr[resI++] = (char)('0' + resBit);
         }
 
-        void handleRemaining(string a, ref int aI, char[] resArr, ref int resI, ref int carry) {
-            while (aI >= 0) {
-                int aBit = a[aI--] - '0';
+        void handleRemaining(string x, ref int xI) {
+            while (xI >= 0) {
+                int xBit = x[xI--] - '0';
 
-                int resBit = aBit ^ carry;
-                carry = aBit & carry;
+                int resBit = xBit ^ carry;
+                carry = xBit & carry;
 
                 resArr[resI++] = (char)('0' + resBit);
             }
         }
 
-        handleRemaining(a, ref aI, resArr, ref resI, ref carry);
-        handleRemaining(b, ref bI, resArr, ref resI, ref carry);
+        handleRemaining(a, ref aI);
+        handleRemaining(b, ref bI);
 
         if (carry > 0) {
             resArr[resI] = '1';
