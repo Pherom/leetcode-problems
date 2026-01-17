@@ -1,4 +1,15 @@
 public class Solution {
+    private void handleRemaining(string a, ref int aI, char[] resArr, ref int resI, ref int carry) {
+        while (aI >= 0) {
+            int aBit = a[aI--] - '0';
+
+            int resBit = aBit ^ carry;
+            carry = aBit & carry;
+
+            resArr[resI++] = (char)('0' + resBit);
+        }
+    }
+
     public string AddBinary(string a, string b) {
         if (b.Length > a.Length) {
             return AddBinary(b, a);
@@ -22,23 +33,8 @@ public class Solution {
             resArr[resI++] = (char)('0' + resBit);
         }
 
-        while (aI >= 0) {
-            int aBit = a[aI--] - '0';
-
-            int resBit = aBit ^ carry;
-            carry = aBit & carry;
-
-            resArr[resI++] = (char)('0' + resBit);
-        }
-
-        while (bI >= 0) {
-            int bBit = b[bI--] - '0';
-
-            int resBit = bBit ^ carry;
-            carry = bBit & carry;
-
-            resArr[resI++] = (char)('0' + resBit);
-        }
+        handleRemaining(a, ref aI, resArr, ref resI, ref carry);
+        handleRemaining(b, ref bI, resArr, ref resI, ref carry);
 
         if (carry > 0) {
             resArr[resI] = '1';
