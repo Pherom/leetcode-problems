@@ -1,5 +1,5 @@
 public class Solution {
-    private void handleRemaining(string a, ref int aI, char[] resArr, ref int resI, ref int carry) {
+    private static void handleRemaining(string a, ref int aI, char[] resArr, ref int resI, ref int carry) {
         while (aI >= 0) {
             int aBit = a[aI--] - '0';
 
