@@ -1,157 +1,118 @@
-#define DICT_ARR_SIZE 100000
+#define HASH_SET_SIZE 1000
+#define ABS(num) (( num ) < 0 ? -( num ) : ( num ))
 
 typedef struct Node Node;
 
 struct Node {
-    int key;
-    int value;
+    int val;
     Node* next;
 };
 
-typedef struct Dictionary Dictionary;
-
-struct Dictionary {
-    int arrSize;
-    int (*hashFunc)(int);
-    Node** arr;
-};
-
-typedef enum DictionaryPutResult {
-    DICTIONARY_PUT_SUCCESS,
-    DICTIONARY_PUT_FAILED
-} DictionaryPutResult;
-
-typedef enum DictionaryGetResult {
-    DICTIONARY_GET_FOUND,
-    DICTIONARY_GET_NOT_FOUND,
-    DICTIONARY_GET_FAILED
-} DictionaryGetResult;
-
-Dictionary* dictionaryCreate(int size, int (*hash)(int)) {
-    Node** arr = (Node**)malloc(sizeof(Node*) * size);
-
-    if (arr == NULL) {
-        return NULL;
-    }
-
-    memset(arr, 0, sizeof(Node*) * size);
-
-    Dictionary* dict = (Dictionary*)malloc(sizeof(Dictionary));
-
-    if (dict == NULL) {
-        free(arr);
-        return NULL;
-    }
-
-    dict->arr = arr;
-    dict->arrSize = size;
-    dict->hashFunc = hash;
-    return dict;
-}
-
-static Node* nodeFind(Node* head, int key) {
-    Node* curr = head;
+bool contains(Node** hashSet, int val) {
+    Node* curr = hashSet[ABS(val) % HASH_SET_SIZE];
 
     while (curr != NULL) {
-        if (curr->key == key) {
-            return curr;
+        if (curr->val == val) {
+            return true;
         }
 
         curr = curr->next;
     }
 
-    return NULL;
+    return false;
 }
 
-static void nodeFree(Node** head) {
+bool insert(Node** hashSet, int val) {
+    if (contains(hashSet, val)) {
+        return false;
+    }
+
+    Node* new = (Node*)malloc(sizeof(Node));
+
+    if (new == NULL) {
+        return false;
+    }
+
+    new->val = val;
+    Node** headPtr = hashSet + (ABS(val) % HASH_SET_SIZE);
+    new->next = (*headPtr);
+    *headPtr = new;
+
+    return true;
+}
+
+bool rem(Node** hashSet, int val) {
+    Node** headPtr = hashSet + (ABS(val) % HASH_SET_SIZE);
+    Node* prev = NULL;
+    Node* curr = *headPtr;
+
+    while (curr != NULL) {
+        if (curr->val == val) {
+            if (prev == NULL) {
+                *headPtr = curr->next;
+            } else {
+                prev->next = curr->next;
+            }
+
+            free(curr);
+            return true;
+        }
+
+        curr = curr->next;
+    }
+
+    return false;
+}
+
+void freeList(Node** head) {
     Node* curr = *head;
 
     while (curr != NULL) {
-        Node* temp = curr->next;
+        Node* next = curr->next;
+        curr->next = NULL;
         free(curr);
-        curr = temp;
+        curr = next;
     }
 
     *head = NULL;
 }
 
-DictionaryPutResult dictionaryPut(Dictionary* dict, int key, int value) {
-    if (dict == NULL) {
-        return DICTIONARY_PUT_FAILED;
+void freeHashSet(Node** hashSet) {
+    for (int i = 0; i < HASH_SET_SIZE; ++i) {
+        freeList(hashSet + i);
     }
-
-    Node* head = dict->arr[dict->hashFunc(key)];
-    Node* found = nodeFind(head, key);
-
-    if (found != NULL) {
-        found->value = value;
-        return DICTIONARY_PUT_SUCCESS;
-    }
-
-    Node* newHead = (Node*)malloc(sizeof(Node));
-
-    if (newHead == NULL) {
-        return DICTIONARY_PUT_FAILED;
-    }
-
-    newHead->key = key;
-    newHead->value = value;
-    newHead->next = head;
-    dict->arr[dict->hashFunc(key)] = newHead;
-
-    return DICTIONARY_PUT_SUCCESS;
-}
-
-DictionaryGetResult dictionaryGet(Dictionary* dict, int key, int* value) {
-    if (dict == NULL || value == NULL) {
-        return DICTIONARY_GET_FAILED;
-    }
-
-    Node* head = dict->arr[dict->hashFunc(key)];
-    Node* found = nodeFind(head, key);
-
-    if (found == NULL) {
-        return DICTIONARY_GET_NOT_FOUND;
-    }
-
-    *value = found->value;
-    return DICTIONARY_GET_FOUND;
-}
-
-void dictionaryFree(Dictionary** dict) {
-    if (dict == NULL || *dict == NULL) {
-        return;
-    }
-
-    for (int i = 0; i < (*dict)->arrSize; ++i) {
-        Node** head = (*dict)->arr + i;
-
-        if (*head != NULL) {
-            nodeFree(head);
-        }
-    }
-
-    free(*dict);
-    *dict = NULL;
-}
-
-static int hash(int key) {
-    return (int)(((unsigned int)key) % DICT_ARR_SIZE);
 }
 
 bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
-    Dictionary* dict = dictionaryCreate(DICT_ARR_SIZE, hash);
+    Node** hashSet = (Node**)calloc(HASH_SET_SIZE, sizeof(Node*));
 
-    for (int i = 0; i < numsSize; ++i) {
-        int idxOther = 0;
-        DictionaryGetResult getRes = dictionaryGet(dict, nums[i], &idxOther);
-        
-        if (getRes == DICTIONARY_GET_FOUND && i - idxOther <= k) {
+    if (hashSet == NULL) {
+        return false; // Would rather an error code but whatever...
+    }
+
+    if (k >= numsSize) {
+        k = numsSize - 1;
+    }
+
+    int left = 0;
+    int right = 0;
+
+    for (; right < k; ++right) {
+        if (!insert(hashSet, nums[right])) {
+            freeHashSet(hashSet);
+            return true;
+        }
+    }
+
+    for (; right < numsSize; ++right) {
+        if (contains(hashSet, nums[right])) {
             return true;
         }
 
-        dictionaryPut(dict, nums[i], i);
+        insert(hashSet, nums[right]);
+        rem(hashSet, nums[left++]);
     }
 
+    freeHashSet(hashSet);
     return false;
 }
