@@ -1,4 +1,4 @@
-#define HASH_SET_SIZE 1000
+#define HASH_SET_SIZE 100000
 #define ABS(num) (( num ) < 0 ? -( num ) : ( num ))
 
 typedef struct Node Node;
