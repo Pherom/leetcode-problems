@@ -1,12 +1,8 @@
 int maxProfit(int* prices, int pricesSize) {
-    if (prices == NULL || pricesSize <= 0) {
-        return 0;
-    }
-
-    int buy = prices[0];
+    int buy = INT32_MAX;
     int profit = 0;
 
-    for (int i = 1; i < pricesSize; ++i) {
+    for (int i = 0; i < pricesSize; ++i) {
         int price = prices[i];
         int potentialProfit = price - buy;
 
