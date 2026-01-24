@@ -90,8 +90,8 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
         return false; // Would rather an error code but whatever...
     }
 
-    if (k >= numsSize) {
-        k = numsSize - 1;
+    if (k > numsSize) {
+        k = numsSize;
     }
 
     int left = 0;
