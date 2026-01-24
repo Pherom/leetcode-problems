@@ -99,7 +99,7 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
 
     for (; right < k; ++right) {
         if (!insert(hashSet, nums[right])) {
-            freeHashSet(hashSet);
+            // freeHashSet(hashSet);
             return true;
         }
     }
@@ -113,6 +113,6 @@ bool containsNearbyDuplicate(int* nums, int numsSize, int k) {
         rem(hashSet, nums[left++]);
     }
 
-    freeHashSet(hashSet);
+    // freeHashSet(hashSet);
     return false;
 }
